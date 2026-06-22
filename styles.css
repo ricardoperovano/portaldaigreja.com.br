@@ -226,9 +226,10 @@ img { max-width: 100%; display: block; }
   background: var(--blue); color: #fff; font-size: .75rem; font-weight: 700;
   padding: 5px 14px; border-radius: 999px; letter-spacing: .02em;
 }
-.price { margin: 16px 0 22px; display: flex; align-items: baseline; gap: 4px; }
-.price .amount { font-family: "Poppins"; font-weight: 700; font-size: 2.3rem; color: var(--navy-deep); }
+.price { margin: 16px 0 22px; display: flex; align-items: baseline; gap: 4px; flex-wrap: wrap; }
+.price .amount { font-family: "Poppins"; font-weight: 700; font-size: 2rem; color: var(--navy-deep); white-space: nowrap; }
 .price .per { color: var(--muted); font-weight: 500; }
+.price.price-quote .amount { font-size: 1.5rem; white-space: normal; }
 .plan-feats { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 12px; }
 .plan-feats li { position: relative; padding-left: 28px; color: var(--text); font-size: .95rem; }
 .plan-feats li::before {
