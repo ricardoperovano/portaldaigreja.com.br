@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal da Igreja — Gestão completa para sua igreja</title>
+  <meta name="description" content="Portal da Igreja é o sistema completo de gestão para igrejas: membros, finanças, dízimos e ofertas, campanhas, relatórios e transparência — seguro, na nuvem e em conformidade com a LGPD." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portal da Igreja — Gestão completa para sua igreja" />
+  <meta property="og:description" content="Membros, finanças, dízimos & ofertas, campanhas e relatórios — tudo em um só lugar, seguro e na nuvem." />
+  <meta property="og:image" content="assets/images/logo-vertical.png" />
+
+  <link rel="icon" href="favicon.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!--
+    Configurable app URLs (change for production deployment):
+      Login          -> http://localhost:5173/login
+      Criar conta     -> http://localhost:5173/register-church
+  -->
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Portal da Igreja - início">
+        <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#recursos">Recursos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="http://localhost:5173/login">Entrar</a>
+        <a class="btn btn-primary" href="http://localhost:5173/register-church">Criar conta grátis</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#recursos">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#planos">Planos</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#contato">Contato</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="http://localhost:5173/login">Entrar</a>
+        <a class="btn btn-primary" href="http://localhost:5173/register-church">Criar conta grátis</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Sistema completo de gestão para igrejas</span>
+          <h1>Gerencie sua igreja com <span class="grad">clareza e transparência</span></h1>
+          <p class="lead">
+            Membros, finanças, dízimos &amp; ofertas, campanhas e relatórios —
+            tudo em um só lugar, seguro e na nuvem.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="http://localhost:5173/register-church">Comece agora</a>
+            <a class="btn btn-outline btn-lg" href="http://localhost:5173/login">Acessar o sistema</a>
+          </div>
+          <p class="trust-line">🔒 Dados criptografados · LGPD · Autenticação em 2 fatores</p>
+        </div>
+
+        <!-- Product mockup -->
+        <div class="hero-visual">
+          <div class="mockup" role="img" aria-label="Prévia do painel do Portal da Igreja">
+            <div class="mockup-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-head">
+                <strong>Painel</strong>
+                <span class="pill">Junho 2026</span>
+              </div>
+              <div class="kpis">
+                <div class="kpi">
+                  <span class="kpi-label">Membros</span>
+                  <span class="kpi-value">248</span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-label">Dízimos</span>
+                  <span class="kpi-value">R$ 12.480</span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-label">Saldo</span>
+                  <span class="kpi-value">R$ 36.900</span>
+                </div>
+              </div>
+              <div class="chart-card">
+                <span class="chart-title">Arrecadação por mês</span>
+                <div class="bars">
+                  <div class="bar" style="height:42%"></div>
+                  <div class="bar" style="height:58%"></div>
+                  <div class="bar" style="height:48%"></div>
+                  <div class="bar" style="height:72%"></div>
+                  <div class="bar" style="height:64%"></div>
+                  <div class="bar tall" style="height:88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img class="float-logo" src="assets/images/logo-vertical.png" alt="Logo Portal da Igreja" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="strip">
+      <p>Feito para igrejas de todos os tamanhos</p>
+    </section>
+
+    <!-- ============ RECURSOS ============ -->
+    <section class="section" id="recursos">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Recursos</span>
+          <h2>Tudo o que sua igreja precisa, em um só lugar</h2>
+          <p>Módulos pensados para a realidade da gestão eclesiástica, do cadastro à prestação de contas.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature">
+            <span class="feat-icon ic-blue">👥</span>
+            <h3>Gestão de Membros</h3>
+            <p>Cadastro completo, histórico e dados de contato com segurança.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">💰</span>
+            <h3>Financeiro</h3>
+            <p>Controle de receitas e despesas com um livro-caixa organizado.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue">🙏</span>
+            <h3>Dízimos &amp; Ofertas</h3>
+            <p>Registre contribuições por tipo e acompanhe a entrada de recursos.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">🎯</span>
+            <h3>Campanhas</h3>
+            <p>Crie campanhas com metas e acompanhe o progresso em tempo real.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue">📊</span>
+            <h3>Relatórios &amp; Dashboard</h3>
+            <p>Visão consolidada com indicadores e gráficos para decisões melhores.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">🤝</span>
+            <h3>Transparência</h3>
+            <p>Prestação de contas aos membros com agregados mensais.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue">🧾</span>
+            <h3>Portal do Membro</h3>
+            <p>Extrato pessoal e informe anual de contribuições em PDF.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">🎂</span>
+            <h3>Aniversariantes</h3>
+            <p>Lembretes automáticos para cuidar de quem faz parte da igreja.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue">🛡️</span>
+            <h3>Auditoria &amp; LGPD</h3>
+            <p>Trilha de auditoria e conformidade com a proteção de dados.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">⛪</span>
+            <h3>Multi-igreja (SaaS)</h3>
+            <p>Isolamento total de dados entre igrejas na mesma plataforma.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="section section-alt" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Como funciona</span>
+          <h2>Comece em três passos</h2>
+          <p>Sem instalação, sem complicação. Tudo na nuvem.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step">
+            <span class="step-num">1</span>
+            <h3>Crie a conta da sua igreja</h3>
+            <p>Cadastre sua igreja em minutos e convide a sua equipe.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">2</span>
+            <h3>Cadastre membros e lançamentos</h3>
+            <p>Importe ou adicione membros e registre contribuições e despesas.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">3</span>
+            <h3>Acompanhe relatórios e transparência</h3>
+            <p>Veja indicadores em tempo real e compartilhe a prestação de contas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEGURANÇA ============ -->
+    <section class="section security" id="seguranca">
+      <div class="container">
+        <div class="section-head light">
+          <span class="kicker">Segurança</span>
+          <h2>Seus dados protegidos de ponta a ponta</h2>
+          <p>Segurança e privacidade não são opcionais — são padrão.</p>
+        </div>
+
+        <div class="security-grid">
+          <article class="sec-card">
+            <span class="sec-icon">🔐</span>
+            <h3>Criptografia em repouso</h3>
+            <p>Dados sensíveis dos membros criptografados no banco de dados.</p>
+          </article>
+          <article class="sec-card">
+            <span class="sec-icon">📱</span>
+            <h3>Autenticação em 2 etapas</h3>
+            <p>Camada extra de proteção no acesso à sua conta (2FA).</p>
+          </article>
+          <article class="sec-card">
+            <span class="sec-icon">📜</span>
+            <h3>Conformidade com a LGPD</h3>
+            <p>Consentimento, exportação e exclusão de dados sob controle.</p>
+          </article>
+          <article class="sec-card">
+            <span class="sec-icon">🏛️</span>
+            <h3>Isolamento entre igrejas</h3>
+            <p>Arquitetura multi-tenant com separação total dos dados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANOS ============ -->
+    <section class="section section-alt" id="planos">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Planos</span>
+          <h2>Escolha o plano ideal para sua igreja</h2>
+          <p>Comece grátis e evolua conforme a sua igreja cresce.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="plan">
+            <h3>Gratuito</h3>
+            <div class="price"><span class="amount">R$ 0</span></div>
+            <ul class="plan-feats">
+              <li>Até 50 membros</li>
+              <li>Módulos essenciais</li>
+              <li>Financeiro básico</li>
+              <li>Dashboard inicial</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="http://localhost:5173/register-church">Criar conta grátis</a>
+          </article>
+
+          <article class="plan plan-featured">
+            <span class="plan-badge">Mais popular</span>
+            <h3>Básico</h3>
+            <div class="price"><span class="amount">R$ 49</span><span class="per">/mês</span></div>
+            <ul class="plan-feats">
+              <li>Até 500 membros</li>
+              <li>Relatórios completos</li>
+              <li>Portal do membro</li>
+              <li>Campanhas e metas</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="http://localhost:5173/register-church">Começar agora</a>
+          </article>
+
+          <article class="plan">
+            <h3>Pro</h3>
+            <div class="price"><span class="amount">R$ 99</span><span class="per">/mês</span></div>
+            <ul class="plan-feats">
+              <li>Membros ilimitados</li>
+              <li>Múltiplos usuários</li>
+              <li>Auditoria avançada</li>
+              <li>Suporte prioritário</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="http://localhost:5173/register-church">Começar agora</a>
+          </article>
+        </div>
+        <p class="pricing-note">* Valores ilustrativos.</p>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Pronto para transformar a gestão da sua igreja?</h2>
+        <p>Crie sua conta gratuita e comece a organizar tudo hoje mesmo.</p>
+        <a class="btn btn-white btn-lg" href="http://localhost:5173/register-church">Criar conta grátis</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo-badge">
+          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja" />
+        </span>
+        <p>Gestão completa, segura e transparente para a sua igreja — na nuvem.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <a href="#recursos">Recursos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#seguranca">Segurança</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="#">Sobre</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Portal da Igreja. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
