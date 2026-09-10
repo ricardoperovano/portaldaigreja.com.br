@@ -4,27 +4,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal da Igreja — Gestão completa para sua igreja</title>
+  <title>Portal da Igreja — Sistema de Gestão para Igrejas | Membros, Dízimos e Finanças</title>
   <meta name="description"
     content="Portal da Igreja é o sistema completo de gestão para igrejas: membros, finanças, dízimos e ofertas, campanhas, relatórios e transparência — seguro, na nuvem e em conformidade com a LGPD." />
+  <meta name="keywords"
+    content="sistema de gestão para igrejas, software para igrejas, gestão de membros, controle de dízimos e ofertas, financeiro para igrejas, tesouraria de igreja, portal do membro, LGPD igreja, gestão eclesiástica" />
+  <meta name="author" content="Portal da Igreja" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0b1f3a" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://portaldaigreja.com.br/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Portal da Igreja — Gestão completa para sua igreja" />
+  <meta property="og:site_name" content="Portal da Igreja" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://portaldaigreja.com.br/" />
+  <meta property="og:title" content="Portal da Igreja — Sistema de Gestão para Igrejas" />
   <meta property="og:description"
+    content="Membros, finanças, dízimos & ofertas, campanhas e relatórios — tudo em um só lugar, seguro e na nuvem. Em conformidade com a LGPD." />
+  <meta property="og:image" content="https://portaldaigreja.com.br/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Portal da Igreja — Sistema de gestão para igrejas" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portal da Igreja — Sistema de Gestão para Igrejas" />
+  <meta name="twitter:description"
     content="Membros, finanças, dízimos & ofertas, campanhas e relatórios — tudo em um só lugar, seguro e na nuvem." />
-  <meta property="og:image" content="assets/images/logo-vertical.png" />
+  <meta name="twitter:image" content="https://portaldaigreja.com.br/assets/images/og-image.jpg" />
 
-  <link rel="icon" href="favicon.jpg" />
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (preconnect + preload for faster first render) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Portal da Igreja",
+    "url": "https://portaldaigreja.com.br/",
+    "logo": "https://portaldaigreja.com.br/assets/images/logo-vertical.png",
+    "description": "Sistema completo de gestão para igrejas: membros, finanças, dízimos e ofertas, campanhas, relatórios e transparência.",
+    "email": "contato@portaldaigreja.com.br",
+    "areaServed": "BR",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contato@portaldaigreja.com.br",
+      "contactType": "customer service",
+      "availableLanguage": ["Portuguese"]
+    }
+  }
+  </script>
+
+  <!-- Structured Data: SoftwareApplication with pricing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Portal da Igreja",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://portaldaigreja.com.br/",
+    "description": "Sistema de gestão para igrejas na nuvem: controle de membros, financeiro, dízimos e ofertas, campanhas, relatórios, portal do membro e conformidade com a LGPD.",
+    "inLanguage": "pt-BR",
+    "offers": [
+      { "@type": "Offer", "name": "Gratuito", "price": "0", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Essencial", "price": "99", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Crescimento", "price": "199", "priceCurrency": "BRL" },
+      { "@type": "Offer", "name": "Avançado", "price": "419", "priceCurrency": "BRL" }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -39,7 +107,10 @@
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Portal da Igreja - início">
-        <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja" />
+        <picture>
+          <source srcset="assets/images/logo-horizontal.webp" type="image/webp" />
+          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="180" height="40" decoding="async" />
+        </picture>
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
@@ -131,7 +202,10 @@
               </div>
             </div>
           </div>
-          <img class="float-logo" src="assets/images/logo-vertical.png" alt="Logo Portal da Igreja" />
+          <picture>
+            <source srcset="assets/images/logo-vertical.webp" type="image/webp" />
+            <img class="float-logo" src="assets/images/logo-vertical.png" alt="Logo Portal da Igreja" loading="lazy" decoding="async" width="120" height="120" />
+          </picture>
         </div>
       </div>
     </section>
@@ -364,7 +438,10 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <span class="footer-logo-badge">
-          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja" />
+          <picture>
+          <source srcset="assets/images/logo-horizontal.webp" type="image/webp" />
+          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="180" height="40" loading="lazy" decoding="async" />
+        </picture>
         </span>
         <p>Gestão completa, segura e transparente para a sua igreja — na nuvem.</p>
       </div>
