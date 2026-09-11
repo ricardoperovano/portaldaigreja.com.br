@@ -49,3 +49,67 @@
     });
   });
 })();
+
+
+// ===== FAQ accordion (only one open at a time) =====
+(function () {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+  items.forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        items.forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      }
+    });
+  });
+})();
+
+// ===== Pricing billing toggle (Mensal / Anual) =====
+(function () {
+  const grid = document.getElementById('pricingGrid');
+  const btnMonthly = document.getElementById('billMonthly');
+  const btnAnnual = document.getElementById('billAnnual');
+  if (!grid || !btnMonthly || !btnAnnual) return;
+
+  const apply = (mode) => {
+    grid.setAttribute('data-billing', mode);
+
+    grid.querySelectorAll('.amount[data-' + mode + ']').forEach((el) => {
+      const val = el.getAttribute('data-' + mode);
+      if (val !== null) el.textContent = val;
+    });
+    grid.querySelectorAll('.price-sub[data-' + mode + ']').forEach((el) => {
+      const val = el.getAttribute('data-' + mode);
+      if (val !== null) el.textContent = val;
+    });
+
+    const isMonthly = mode === 'monthly';
+    btnMonthly.classList.toggle('is-active', isMonthly);
+    btnAnnual.classList.toggle('is-active', !isMonthly);
+    btnMonthly.setAttribute('aria-pressed', String(isMonthly));
+    btnAnnual.setAttribute('aria-pressed', String(!isMonthly));
+  };
+
+  btnMonthly.addEventListener('click', () => apply('monthly'));
+  btnAnnual.addEventListener('click', () => apply('annual'));
+})();
+
+// ===== Sticky footer CTA on mobile (after 300px scroll, < 768px) =====
+(function () {
+  const sticky = document.getElementById('stickyCta');
+  if (!sticky) return;
+
+  const update = () => {
+    const isMobile = window.innerWidth < 768;
+    const show = isMobile && window.scrollY > 300;
+    sticky.classList.toggle('is-visible', show);
+    sticky.setAttribute('aria-hidden', String(!show));
+    document.body.classList.toggle('sticky-active', show);
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
