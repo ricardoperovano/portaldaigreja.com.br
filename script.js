@@ -113,3 +113,67 @@
   window.addEventListener('resize', update);
   update();
 })();
+
+
+
+// ============ Rastreamento de Conversões — GA4 ============
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Rastrear clique em qualquer botão de cadastro / CTA principal
+  document.querySelectorAll('a[href*="register-church"]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion_cadastro', {
+          event_category: 'CTA',
+          event_label: btn.textContent.trim()
+        });
+        // Evento de conversão para Google Ads (adicionar tag de conversão do Ads depois)
+        gtag('event', 'conversion', {
+          send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL' // substituir ao criar campanha no Google Ads
+        });
+      }
+    });
+  });
+
+  // Rastrear clique no botão do WhatsApp
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'Contato',
+          event_label: 'WhatsApp Flutuante'
+        });
+      }
+    });
+  });
+
+  // Rastrear clique em "Entrar" (login)
+  document.querySelectorAll('a[href*="login"]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'login_click', {
+          event_category: 'Navegação',
+          event_label: 'Botão Entrar'
+        });
+      }
+    });
+  });
+
+  // Rastrear scroll profundo (50% e 90% da página) — indica engajamento
+  var scrollMilestones = { 50: false, 90: false };
+  window.addEventListener('scroll', function () {
+    var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    [50, 90].forEach(function (milestone) {
+      if (scrollPct >= milestone && !scrollMilestones[milestone]) {
+        scrollMilestones[milestone] = true;
+        if (typeof gtag === 'function') {
+          gtag('event', 'scroll_depth', {
+            event_category: 'Engajamento',
+            event_label: milestone + '%'
+          });
+        }
+      }
+    });
+  });
+
+});
