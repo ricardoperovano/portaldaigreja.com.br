@@ -52,4 +52,12 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Página de contato WhatsApp -->
+  <url>
+    <loc>https://portaldaigreja.com.br/whatsapp</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
