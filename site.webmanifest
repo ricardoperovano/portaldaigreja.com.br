@@ -1,0 +1,17 @@
+{
+  "name": "Portal da Igreja",
+  "short_name": "Portal da Igreja",
+  "description": "Sistema completo de gestão para igrejas: membros, finanças, dízimos e ofertas, campanhas e relatórios.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1f3a",
+  "icons": [
+    { "src": "favicon-16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "favicon-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
