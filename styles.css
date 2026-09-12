@@ -381,7 +381,8 @@ img { max-width: 100%; display: block; }
 
 /* ====================== WhatsApp float ====================== */
 .wa-float {
-  position: fixed; right: 22px; bottom: 22px; z-index: 900;
+  /* Sits ABOVE the Monitchat chat bubble (56px at bottom/right 20px) so both stay clickable. */
+  position: fixed; right: 22px; bottom: 92px; z-index: 900;
   width: 58px; height: 58px; border-radius: 50%;
   background: #25d366; box-shadow: 0 8px 24px rgba(37, 211, 102, .45);
   display: inline-flex; align-items: center; justify-content: center;
@@ -414,5 +415,5 @@ img { max-width: 100%; display: block; }
 @media (max-width: 767px) {
   .sticky-cta { display: block; }
   /* lift WhatsApp button above sticky CTA when visible so they don't collide */
-  body.sticky-active .wa-float { bottom: 84px; }
+  body.sticky-active .wa-float { bottom: 154px; }
 }
