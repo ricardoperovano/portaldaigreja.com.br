@@ -239,6 +239,11 @@ img { max-width: 100%; display: block; }
 }
 .price { margin: 16px 0 22px; display: flex; align-items: baseline; gap: 4px; flex-wrap: wrap; }
 .price .amount { font-family: "Poppins"; font-weight: 700; font-size: 2rem; color: var(--navy-deep); white-space: nowrap; }
+/* Prices with cents ("R$ 299,90") in the 5-column row: keep "/mês" beside the amount. */
+@media (min-width: 1201px) {
+  .pricing-grid .plan { padding: 30px 20px; }
+  .price .amount { font-size: 1.5rem; }
+}
 .price .per { color: var(--muted); font-weight: 500; }
 .price.price-quote .amount { font-size: 1.5rem; white-space: normal; }
 .plan-feats { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 12px; }
