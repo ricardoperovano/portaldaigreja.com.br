@@ -27,23 +27,35 @@ O que ele verifica, para cada URL do sitemap:
 
 E no sitemap: nenhuma âncora (`#`), nenhuma URL repetida, todas no domínio.
 
-Resultado da última execução local (13/10/2026): **394 verificações, 0 falhas**.
+Resultado da última execução local (13/10/2026): **896 verificações, 0 falhas**.
+
+Nas páginas em inglês ele verifica ainda:
+
+- `hreflang` nos dois sentidos entre a página e a sua equivalente em português, com `x-default`;
+- `<html lang>` correto;
+- a presença do aviso de que o sistema é em português e a cobrança é em reais.
 
 ## 2. Ao criar uma página nova
 
-1. Acrescente o conteúdo em `tools/build_pages.py` (só o que o produto faz — confira em
+1. Acrescente o conteúdo em `tools/content_pt.py` e, se for publicar nos dois idiomas, em
+   `tools/content_en.py` (só o que o produto faz — confira em
    `docs/CATALOGO-FUNCIONALIDADES-IGREJAS.md`).
-2. `python3 tools/build_pages.py`
-3. Acrescente a URL em `sitemap.xml`.
-4. `python3 tools/seo_check.py`
-5. Publique e rode `python3 tools/seo_check.py --live`.
+2. Ligue as duas versões em `EQUIVALENT`, em `tools/build_pages.py` e em `tools/seo_check.py`.
+3. `python3 tools/build_pages.py`
+4. Acrescente as URLs em `sitemap.xml`.
+5. `python3 tools/seo_check.py`
+6. Publique e rode `python3 tools/seo_check.py --live`.
+
+**Ao mexer na home em português**, rode `python3 tools/build_en_home.py` em seguida: ele traduz a
+home para `/en/` e ERRA se encontrar uma frase nova sem tradução, em vez de publicar português na
+página em inglês.
 
 ## 3. Conferência manual (uma vez, após publicar)
 
 | O que | Como | Esperado |
 |---|---|---|
 | Páginas no ar | abrir as 5 URLs | 200, layout igual ao da home |
-| Sitemap | `curl -s https://portaldaigreja.com.br/sitemap.xml` | 8 URLs, nenhuma com `#` |
+| Sitemap | `curl -s https://portaldaigreja.com.br/sitemap.xml` | 15 URLs (8 em português, 7 em inglês), nenhuma com `#` |
 | 404 | abrir `/pagina-que-nao-existe` | página com a marca e links |
 | Prévia de compartilhamento | colar a URL no WhatsApp | imagem e título corretos |
 | Dados estruturados | [Rich Results Test](https://search.google.com/test/rich-results) | Organization, SoftwareApplication, FAQPage e BreadcrumbList sem erro |

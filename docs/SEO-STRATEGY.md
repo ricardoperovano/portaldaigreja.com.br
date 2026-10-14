@@ -15,7 +15,38 @@ dado verificado, está escrito "a verificar no Search Console / Keyword Planner"
 ├── /financeiro-para-igrejas/   tesouraria: receitas, despesas, relatórios
 ├── /site-para-igrejas/         presença digital: construtor de site incluso
 └── /whatsapp/                  página de contato (fina, mantida por já existir)
+
+/en/                            versão em inglês, para igrejas BRASILEIRAS no exterior
+├── /en/church-management-software/
+├── /en/church-member-database/
+├── /en/church-tithes-offerings/
+├── /en/church-accounting-software/
+├── /en/church-financial-reports/
+└── /en/church-website-builder/
 ```
+
+## 1b. A versão em inglês
+
+**Público:** igrejas brasileiras nos Estados Unidos, Europa e Japão. Não é o mercado americano:
+o sistema é em português, a cobrança é em reais e o Pix exige conta bancária no Brasil. Vender
+para uma igreja americana exigiria traduzir o aplicativo, cobrar em dólar e ter outra forma de
+doação — projeto de produto, não de site.
+
+Por isso **toda página em inglês carrega um aviso** de que a interface e o suporte são em
+português e a cobrança é em reais, antes do visitante clicar em "Create free account".
+`tools/seo_check.py` falha se esse aviso sumir de alguma página.
+
+Cada página em inglês tem a sua equivalente em português, ligadas por `hreflang` nos dois
+sentidos, com `x-default` apontando para a versão em português. O rodapé e o menu do celular
+trazem o troca-idioma.
+
+Palavras-chave em inglês (volume não medido): church management software, church member
+database, church management system, tithes and offerings software, church accounting software,
+church financial reports, church website builder.
+
+**Quando reavaliar:** se as páginas em inglês trouxerem cadastros de igrejas brasileiras no
+exterior, vale traduzir o aplicativo. Se trouxerem só igrejas americanas que desistem no aviso,
+o caminho é outro: ou internacionalizar o produto, ou encerrar a versão em inglês.
 
 Todas as páginas novas linkam entre si ("Veja também"), a home linka para todas, e todas
 voltam para a home e para `/#planos`. Sem página órfã e sem link morto — verificado por

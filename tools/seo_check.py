@@ -42,7 +42,28 @@ BANNED_PATTERNS = [
     (r"AW-CONVERSION_ID", "placeholder de conversão do Google Ads"),
     (r"não conseguirá lê-las", "garantia absoluta de segurança"),
     (r"★★★★★", "avaliação em estrelas sem avaliações reais"),
+    # versão em inglês: as mesmas regras, além do que não existe fora do Brasil
+    (r"money[- ]back guarantee", "garantia de reembolso que não existe"),
+    (r"\b500\+? churches", "número de clientes sem comprovação"),
+    (r"(?<!no )automatic(ally)? reconcil", "baixa automática de Pix, que não existe"),
 ]
+# O contrário de uma proibição: a página em inglês PRECISA avisar que o sistema é
+# em português e cobrado em reais, para ninguém assinar achando o contrário.
+REQUIRED_EN = [
+    (r"Portuguese", "o aviso de que o sistema/suporte é em português"),
+    (r"Brazilian reais|BRL", "o aviso de que a cobrança é em reais"),
+]
+# Pares de páginas equivalentes: toda página precisa apontar para a sua versão no
+# outro idioma (hreflang), nos dois sentidos.
+EQUIVALENT = {
+    "/": "/en/",
+    "/sistema-gestao-igrejas/": "/en/church-management-software/",
+    "/cadastro-membros-igreja/": "/en/church-member-database/",
+    "/controle-dizimos-ofertas/": "/en/church-tithes-offerings/",
+    "/financeiro-para-igrejas/": "/en/church-accounting-software/",
+    "/prestacao-de-contas-igreja/": "/en/church-financial-reports/",
+    "/site-para-igrejas/": "/en/church-website-builder/",
+}
 FAILURES: list[str] = []
 CHECKS = 0
 
@@ -156,8 +177,30 @@ def main() -> int:
                 target = ROOT / (href.strip("/") + "/index.html" if href.strip("/") else "index.html")
                 check(target.exists(), f"{where}: link interno quebrado: {href}")
 
+        # hreflang: a página aponta para a sua equivalente no outro idioma?
+        pair = EQUIVALENT.get(path) or {v: k for k, v in EQUIVALENT.items()}.get(path)
+        if pair:
+            langs = dict(re.findall(
+                r'<link[^>]*rel=["\']alternate["\'][^>]*hreflang=["\']([^"\']+)["\'][^>]*href=["\']([^"\']+)["\']',
+                html, re.I))
+            check("pt-BR" in langs and "en" in langs, f"{where}: sem hreflang para os dois idiomas")
+            check(langs.get("x-default", "").startswith(SITE),
+                  f"{where}: sem hreflang x-default")
+            expected = SITE + (pair if path in EQUIVALENT else path)
+            other = SITE + (pair if path not in EQUIVALENT else pair)
+            check(other in langs.values(),
+                  f"{where}: hreflang não aponta para {other}")
+            lang_attr = re.search(r'<html[^>]*lang=["\']([^"\']+)["\']', html)
+            want = "en" if path.startswith("/en/") else "pt-BR"
+            check(bool(lang_attr) and lang_attr.group(1) == want,
+                  f"{where}: <html lang> deveria ser {want}")
+
         for pattern, why in BANNED_PATTERNS:
             check(not re.search(pattern, html, re.I), f"{where}: afirmação proibida ({why})")
+
+        if path.startswith("/en/"):
+            for pattern, what in REQUIRED_EN:
+                check(bool(re.search(pattern, html)), f"{where}: falta {what}")
 
     # arquivos auxiliares
     if not args.live:
