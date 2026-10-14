@@ -325,15 +325,82 @@ PAGES: list[dict] = [
              "Os eventos marcados como públicos na agenda do sistema aparecem no site automaticamente, sem precisar editar a página."),
         ],
     },
+    {
+        "slug": "prestacao-de-contas-igreja",
+        "title": "Prestação de Contas de Igreja | Portal da Igreja",
+        "description": ("Relatório mensal para a diretoria, transparência para os membros sem "
+                        "expor quem contribuiu e informe anual em PDF, prontos pelo sistema."),
+        "kicker": "Prestação de contas",
+        "h1": "Prestação de contas de igreja, pronta para apresentar",
+        "lead": ("A reunião de prestação de contas não precisa custar um fim de semana montando "
+                 "planilha. O sistema gera o fechamento do mês para a diretoria, o relatório de "
+                 "transparência para a igreja — sem dizer quem deu quanto — e o informe anual de "
+                 "cada membro."),
+        "blocks": [
+            {"type": "prose", "kicker": "O problema", "h2": "Confiança se constrói com número aberto",
+             "paras": [
+                 "Quando a igreja não sabe para onde vai o dinheiro, nasce desconfiança — e quase "
+                 "sempre não é por má-fé, é por falta de um relatório claro. Por outro lado, "
+                 "ninguém quer expor quanto cada irmão contribuiu.",
+                 "A saída é separar os dois documentos: um relatório aberto à igreja, com totais e "
+                 "sem nomes, e um relatório detalhado para quem tem responsabilidade sobre as "
+                 "contas. O sistema produz os dois a partir dos mesmos lançamentos."]},
+            {"type": "features", "kicker": "Os documentos", "h2": "O que sai pronto do sistema",
+             "items": [
+                 ("📑", "ic-blue", "Fechamento do mês", None),
+                 ("👁️", "ic-green", "Transparência para a igreja", None),
+                 ("📂", "ic-blue", "Relatório por categoria", None),
+                 ("🧾", "ic-green", "Informe anual do membro", None),
+                 ("🎯", "ic-blue", "Contas de cada campanha", None),
+                 ("🔎", "ic-green", "Trilha de auditoria", None),
+             ],
+             "plain": {
+                 "Fechamento do mês": "Para a reunião de diretoria: quanto entrou e quanto saiu, a comparação com o mês anterior, as entradas por tipo de contribuição, as despesas por categoria com o peso de cada uma, as maiores saídas e o previsto para os próximos 30 dias. Sai em PDF com papel timbrado e páginas numeradas.",
+                 "Transparência para a igreja": "Os totais por mês, sem identificar quem contribuiu. É o documento que pode ser lido em assembleia, afixado no mural ou enviado aos membros sem constranger ninguém. Sai em PDF e em Excel.",
+                 "Relatório por categoria": "Escolha as categorias e as campanhas que quer prestar contas e gere um relatório com todos os lançamentos, os subtotais e o total de cada lado. O PDF traz linhas de assinatura para o tesoureiro e o conselho; o Excel vem em abas de resumo, detalhamento e lançamentos.",
+                 "Informe anual do membro": "Cada membro entra no portal e baixa o próprio informe do ano em PDF, sem precisar pedir à tesouraria.",
+                 "Contas de cada campanha": "Campanha de construção, missões ou ação social com meta, quanto já foi arrecadado e um relatório só daquela campanha, para prestar contas de quem doou para um fim específico.",
+                 "Trilha de auditoria": "O sistema registra quem criou, alterou ou apagou cada lançamento, num histórico que não pode ser editado nem apagado. Se alguém questionar um número, dá para mostrar a origem.",
+             }},
+            {"type": "steps", "kicker": "Na prática", "h2": "Como fica o mês da tesouraria",
+             "items": [
+                 ("Lance ao longo do mês", "Dízimos, ofertas e despesas entram no dia a dia, cada um na sua categoria. As contas fixas o sistema lança sozinho."),
+                 ("Feche o mês em um clique", "No fim do período, gere o fechamento em PDF. Os números já estão somados, comparados com o mês anterior e separados por categoria."),
+                 ("Apresente e arquive", "Leve o PDF à reunião, compartilhe o relatório de transparência com a igreja e guarde o arquivo. O histórico fica registrado no sistema."),
+             ]},
+            {"type": "prose", "kicker": "Quem vê o quê", "h2": "Cada relatório para o público certo",
+             "paras": [
+                 "Os valores por pessoa ficam restritos a quem tem permissão de administração ou "
+                 "gestão. Operadores e membros não acessam a tesouraria, e o relatório aberto à "
+                 "igreja nunca traz nomes.",
+                 "Para o contador, os lançamentos, as contribuições e as campanhas saem em CSV, que "
+                 "abre no Excel e em qualquer sistema contábil. O Portal da Igreja não substitui a "
+                 "contabilidade nem emite documento fiscal: ele organiza os números e entrega o "
+                 "relatório pronto."]},
+        ],
+        "faq": [
+            ("Dá para mostrar as contas sem expor quem contribuiu?",
+             "Dá, e é o padrão. O relatório de transparência mostra os totais por mês, sem nomes nem valores individuais. Quanto cada pessoa contribuiu só aparece para quem tem permissão de tesouraria ou direção."),
+            ("O relatório serve para a reunião de diretoria?",
+             "Serve. O fechamento do mês sai em PDF com papel timbrado, páginas numeradas, comparativo com o mês anterior, despesas por categoria e as maiores saídas. O relatório por categoria ainda traz linhas de assinatura."),
+            ("E se alguém questionar um lançamento?",
+             "O sistema guarda quem criou ou alterou cada registro, num histórico que não pode ser editado nem apagado."),
+            ("O membro consegue comprovar o que contribuiu no ano?",
+             "Sim. Ele mesmo baixa o informe anual em PDF pelo portal do membro, sem precisar pedir à secretaria."),
+            ("Substitui o contador?",
+             "Não. O sistema organiza os lançamentos e gera os relatórios; a contabilidade e as obrigações fiscais continuam com o seu contador, que pode receber tudo em CSV ou Excel."),
+        ],
+    },
 ]
 
 # Rótulo curto para o menu; o longo vai no rodapé e nos cartões "Veja também".
 NAV_LABELS = {
     "sistema-gestao-igrejas": "Sistema",
-    "controle-dizimos-ofertas": "Dízimos e ofertas",
     "cadastro-membros-igreja": "Membros",
+    "controle-dizimos-ofertas": "Dízimos",
     "financeiro-para-igrejas": "Financeiro",
-    "site-para-igrejas": "Site da igreja",
+    "prestacao-de-contas-igreja": "Transparência",
+    "site-para-igrejas": "Site",
 }
 RELATED_SUB = {
     "sistema-gestao-igrejas": "A visão geral de tudo o que o sistema faz, do cadastro ao relatório.",
@@ -341,6 +408,7 @@ RELATED_SUB = {
     "cadastro-membros-igreja": "Ficha, famílias, grupos e a importação da planilha que a igreja já tem.",
     "financeiro-para-igrejas": "Receitas, despesas, contas fixas e o fechamento do mês em PDF.",
     "site-para-igrejas": "Site público com agenda, horários de culto e Pix, incluso nos planos pagos.",
+    "prestacao-de-contas-igreja": "O relatório da reunião, a transparência para a igreja e o informe anual.",
 }
 RELATED_LABELS = {
     "sistema-gestao-igrejas": "Sistema de gestão para igrejas",
@@ -348,6 +416,7 @@ RELATED_LABELS = {
     "cadastro-membros-igreja": "Cadastro de membros",
     "financeiro-para-igrejas": "Financeiro para igrejas",
     "site-para-igrejas": "Site para igrejas",
+    "prestacao-de-contas-igreja": "Prestação de contas",
 }
 
 # --------------------------------------------------------------- template

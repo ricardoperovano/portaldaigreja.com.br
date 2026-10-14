@@ -17,7 +17,7 @@ dado verificado, está escrito "a verificar no Search Console / Keyword Planner"
 └── /whatsapp/                  página de contato (fina, mantida por já existir)
 ```
 
-Todas as páginas novas linkam entre si ("Veja também"), a home linka para as cinco, e as cinco
+Todas as páginas novas linkam entre si ("Veja também"), a home linka para todas, e todas
 voltam para a home e para `/#planos`. Sem página órfã e sem link morto — verificado por
 `tools/seo_check.py`.
 
@@ -40,12 +40,19 @@ execução). A prioridade abaixo vem da intenção comercial, não de volume est
 | importar planilha de membros | problema | `/cadastro-membros-igreja/` | 3 |
 | sistema financeiro para igrejas | compra | `/financeiro-para-igrejas/` | 1 |
 | tesouraria de igreja online | compra | `/financeiro-para-igrejas/` | 2 |
-| prestação de contas de igreja | problema | `/financeiro-para-igrejas/` | 2 |
-| relatório financeiro de igreja | problema | `/financeiro-para-igrejas/` | 3 |
+| prestação de contas de igreja | problema | `/prestacao-de-contas-igreja/` | 1 |
+| relatório financeiro de igreja | problema | `/prestacao-de-contas-igreja/` | 2 |
+| transparência financeira na igreja | problema | `/prestacao-de-contas-igreja/` | 3 |
+| informe anual de dízimos | funcionalidade | `/prestacao-de-contas-igreja/` | 3 |
 | criar site para igreja | compra | `/site-para-igrejas/` | 1 |
 | site para igreja evangélica | compra | `/site-para-igrejas/` | 2 |
 | portal do membro | funcionalidade | `/sistema-gestao-igrejas/` (seção) | 3 |
 | gestão de células / ministérios | funcionalidade | `/cadastro-membros-igreja/` (seção) | 3 |
+
+`/financeiro-para-igrejas/` e `/prestacao-de-contas-igreja/` dividem o mesmo módulo de propósito:
+a primeira é a rotina do tesoureiro (lançar, categorizar, contas fixas), a segunda é o momento de
+prestar contas (relatório da diretoria, transparência, informe anual). Se as duas começarem a
+aparecer para a mesma consulta no Search Console, junte-as.
 
 **Canibalização:** "sistema de gestão" e "software para igrejas" respondem à mesma intenção e
 ficam na mesma página, de propósito. A home disputa a marca ("Portal da Igreja"), por isso o
@@ -58,7 +65,6 @@ title dela é diferente do da página-pilar.
 | `/secretaria-de-igreja/` | o produto não tem carteirinha, declaração, carta de transferência nem atas. A página prometeria o que não existe |
 | `/gestao-celulas-ministerios/` | existe cadastro de grupos, mas não presença nem multiplicação: conteúdo fino demais para sustentar uma página própria. Fica como seção |
 | `/gestao-eventos-igreja/` | a agenda não tem inscrição nem presença; hoje é um bloco do site da igreja |
-| `/relatorios-financeiros-igreja/` | canibalizaria `/financeiro-para-igrejas/`, que já cobre relatórios |
 | `/portal-do-membro/` | pode valer no futuro; hoje repetiria trechos das outras duas páginas |
 
 Reavalie cada uma quando o módulo correspondente existir (ver oportunidades no catálogo).

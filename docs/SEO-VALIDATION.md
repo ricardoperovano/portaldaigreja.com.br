@@ -27,7 +27,7 @@ O que ele verifica, para cada URL do sitemap:
 
 E no sitemap: nenhuma âncora (`#`), nenhuma URL repetida, todas no domínio.
 
-Resultado da última execução local (13/10/2026): **320 verificações, 0 falhas**.
+Resultado da última execução local (13/10/2026): **394 verificações, 0 falhas**.
 
 ## 2. Ao criar uma página nova
 
@@ -43,7 +43,7 @@ Resultado da última execução local (13/10/2026): **320 verificações, 0 falh
 | O que | Como | Esperado |
 |---|---|---|
 | Páginas no ar | abrir as 5 URLs | 200, layout igual ao da home |
-| Sitemap | `curl -s https://portaldaigreja.com.br/sitemap.xml` | 7 URLs, nenhuma com `#` |
+| Sitemap | `curl -s https://portaldaigreja.com.br/sitemap.xml` | 8 URLs, nenhuma com `#` |
 | 404 | abrir `/pagina-que-nao-existe` | página com a marca e links |
 | Prévia de compartilhamento | colar a URL no WhatsApp | imagem e título corretos |
 | Dados estruturados | [Rich Results Test](https://search.google.com/test/rich-results) | Organization, SoftwareApplication, FAQPage e BreadcrumbList sem erro |

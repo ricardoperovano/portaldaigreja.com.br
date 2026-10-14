@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F49Y1WNQ4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F49Y1WNQ4H');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prestação de Contas de Igreja | Portal da Igreja</title>
+  <meta name="description" content="Relatório mensal para a diretoria, transparência para os membros sem expor quem contribuiu e informe anual em PDF, prontos pelo sistema." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0b1f3a" />
+  <link rel="canonical" href="https://portaldaigreja.com.br/prestacao-de-contas-igreja/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Portal da Igreja" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://portaldaigreja.com.br/prestacao-de-contas-igreja/" />
+  <meta property="og:title" content="Prestação de Contas de Igreja | Portal da Igreja" />
+  <meta property="og:description" content="Relatório mensal para a diretoria, transparência para os membros sem expor quem contribuiu e informe anual em PDF, prontos pelo sistema." />
+  <meta property="og:image" content="https://portaldaigreja.com.br/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Portal da Igreja — sistema de gestão para igrejas" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prestação de Contas de Igreja | Portal da Igreja" />
+  <meta name="twitter:description" content="Relatório mensal para a diretoria, transparência para os membros sem expor quem contribuiu e informe anual em PDF, prontos pelo sistema." />
+  <meta name="twitter:image" content="https://portaldaigreja.com.br/assets/images/og-image.jpg" />
+
+  <link rel="icon" href="/favicon-48.png" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://portaldaigreja.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Prestação de contas",
+        "item": "https://portaldaigreja.com.br/prestacao-de-contas-igreja/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Dá para mostrar as contas sem expor quem contribuiu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dá, e é o padrão. O relatório de transparência mostra os totais por mês, sem nomes nem valores individuais. Quanto cada pessoa contribuiu só aparece para quem tem permissão de tesouraria ou direção."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O relatório serve para a reunião de diretoria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Serve. O fechamento do mês sai em PDF com papel timbrado, páginas numeradas, comparativo com o mês anterior, despesas por categoria e as maiores saídas. O relatório por categoria ainda traz linhas de assinatura."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se alguém questionar um lançamento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O sistema guarda quem criou ou alterou cada registro, num histórico que não pode ser editado nem apagado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O membro consegue comprovar o que contribuiu no ano?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Ele mesmo baixa o informe anual em PDF pelo portal do membro, sem precisar pedir à secretaria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Substitui o contador?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O sistema organiza os lançamentos e gera os relatórios; a contabilidade e as obrigações fiscais continuam com o seu contador, que pode receber tudo em CSV ou Excel."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo" aria-label="Portal da Igreja - início">
+        <picture>
+          <source srcset="/assets/images/logo-horizontal.webp" type="image/webp" />
+          <img src="/assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="100" height="40" decoding="async" />
+        </picture>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="/sistema-gestao-igrejas/">Sistema</a>
+        <a href="/cadastro-membros-igreja/">Membros</a>
+        <a href="/controle-dizimos-ofertas/">Dízimos</a>
+        <a href="/financeiro-para-igrejas/">Financeiro</a>
+        <a href="/prestacao-de-contas-igreja/" aria-current="page">Transparência</a>
+        <a href="/site-para-igrejas/">Site</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://app.portaldaigreja.com.br/login">Entrar</a>
+        <a class="btn btn-primary" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <a href="/sistema-gestao-igrejas/">Sistema</a>
+        <a href="/cadastro-membros-igreja/">Membros</a>
+        <a href="/controle-dizimos-ofertas/">Dízimos</a>
+        <a href="/financeiro-para-igrejas/">Financeiro</a>
+        <a href="/prestacao-de-contas-igreja/" aria-current="page">Transparência</a>
+        <a href="/site-para-igrejas/">Site</a>
+      <a href="/#planos">Planos</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="https://app.portaldaigreja.com.br/login">Entrar</a>
+        <a class="btn btn-primary" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container container-narrow">
+        <div class="hero-copy">
+          <span class="eyebrow">Prestação de contas</span>
+          <h1>Prestação de contas de igreja, pronta para apresentar</h1>
+          <p class="lead">A reunião de prestação de contas não precisa custar um fim de semana montando planilha. O sistema gera o fechamento do mês para a diretoria, o relatório de transparência para a igreja — sem dizer quem deu quanto — e o informe anual de cada membro.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+            <a class="btn btn-outline btn-lg" href="/#planos">Ver planos e preços</a>
+          </div>
+          <p class="hero-badge">✅ Plano gratuito até 50 membros · Sem cartão de crédito</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">O problema</span>
+          <h2>Confiança se constrói com número aberto</h2>
+        </div>
+        <p class='lead'>Quando a igreja não sabe para onde vai o dinheiro, nasce desconfiança — e quase sempre não é por má-fé, é por falta de um relatório claro. Por outro lado, ninguém quer expor quanto cada irmão contribuiu.</p><p class='lead'>A saída é separar os dois documentos: um relatório aberto à igreja, com totais e sem nomes, e um relatório detalhado para quem tem responsabilidade sobre as contas. O sistema produz os dois a partir dos mesmos lançamentos.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Os documentos</span>
+          <h2>O que sai pronto do sistema</h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature">
+            <span class="feat-icon ic-blue">📑</span>
+            <h3>Fechamento do mês</h3>
+            <p>Para a reunião de diretoria: quanto entrou e quanto saiu, a comparação com o mês anterior, as entradas por tipo de contribuição, as despesas por categoria com o peso de cada uma, as maiores saídas e o previsto para os próximos 30 dias. Sai em PDF com papel timbrado e páginas numeradas.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">👁️</span>
+            <h3>Transparência para a igreja</h3>
+            <p>Os totais por mês, sem identificar quem contribuiu. É o documento que pode ser lido em assembleia, afixado no mural ou enviado aos membros sem constranger ninguém. Sai em PDF e em Excel.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue">📂</span>
+            <h3>Relatório por categoria</h3>
+            <p>Escolha as categorias e as campanhas que quer prestar contas e gere um relatório com todos os lançamentos, os subtotais e o total de cada lado. O PDF traz linhas de assinatura para o tesoureiro e o conselho; o Excel vem em abas de resumo, detalhamento e lançamentos.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">🧾</span>
+            <h3>Informe anual do membro</h3>
+            <p>Cada membro entra no portal e baixa o próprio informe do ano em PDF, sem precisar pedir à tesouraria.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue">🎯</span>
+            <h3>Contas de cada campanha</h3>
+            <p>Campanha de construção, missões ou ação social com meta, quanto já foi arrecadado e um relatório só daquela campanha, para prestar contas de quem doou para um fim específico.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green">🔎</span>
+            <h3>Trilha de auditoria</h3>
+            <p>O sistema registra quem criou, alterou ou apagou cada lançamento, num histórico que não pode ser editado nem apagado. Se alguém questionar um número, dá para mostrar a origem.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Na prática</span>
+          <h2>Como fica o mês da tesouraria</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step">
+            <span class="step-num">1</span>
+            <h3>Lance ao longo do mês</h3>
+            <p>Dízimos, ofertas e despesas entram no dia a dia, cada um na sua categoria. As contas fixas o sistema lança sozinho.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">2</span>
+            <h3>Feche o mês em um clique</h3>
+            <p>No fim do período, gere o fechamento em PDF. Os números já estão somados, comparados com o mês anterior e separados por categoria.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">3</span>
+            <h3>Apresente e arquive</h3>
+            <p>Leve o PDF à reunião, compartilhe o relatório de transparência com a igreja e guarde o arquivo. O histórico fica registrado no sistema.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">Quem vê o quê</span>
+          <h2>Cada relatório para o público certo</h2>
+        </div>
+        <p class='lead'>Os valores por pessoa ficam restritos a quem tem permissão de administração ou gestão. Operadores e membros não acessam a tesouraria, e o relatório aberto à igreja nunca traz nomes.</p><p class='lead'>Para o contador, os lançamentos, as contribuições e as campanhas saem em CSV, que abre no Excel e em qualquer sistema contábil. O Portal da Igreja não substitui a contabilidade nem emite documento fiscal: ele organiza os números e entrega o relatório pronto.</p>
+      </div>
+    </section>
+    <section class="section faq" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">Dúvidas frequentes</span>
+          <h2>Perguntas de quem está avaliando</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Dá para mostrar as contas sem expor quem contribuiu?</summary>
+            <div class="faq-answer"><p>Dá, e é o padrão. O relatório de transparência mostra os totais por mês, sem nomes nem valores individuais. Quanto cada pessoa contribuiu só aparece para quem tem permissão de tesouraria ou direção.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>O relatório serve para a reunião de diretoria?</summary>
+            <div class="faq-answer"><p>Serve. O fechamento do mês sai em PDF com papel timbrado, páginas numeradas, comparativo com o mês anterior, despesas por categoria e as maiores saídas. O relatório por categoria ainda traz linhas de assinatura.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>E se alguém questionar um lançamento?</summary>
+            <div class="faq-answer"><p>O sistema guarda quem criou ou alterou cada registro, num histórico que não pode ser editado nem apagado.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>O membro consegue comprovar o que contribuiu no ano?</summary>
+            <div class="faq-answer"><p>Sim. Ele mesmo baixa o informe anual em PDF pelo portal do membro, sem precisar pedir à secretaria.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Substitui o contador?</summary>
+            <div class="faq-answer"><p>Não. O sistema organiza os lançamentos e gera os relatórios; a contabilidade e as obrigações fiscais continuam com o seu contador, que pode receber tudo em CSV ou Excel.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Veja também</span>
+          <h2>Outras partes do sistema</h2>
+        </div>
+        <div class="features-grid">
+          <a class="feature" href="/sistema-gestao-igrejas/"><h3>Sistema de gestão para igrejas</h3><p>A visão geral de tudo o que o sistema faz, do cadastro ao relatório.</p></a>
+          <a class="feature" href="/controle-dizimos-ofertas/"><h3>Controle de dízimos e ofertas</h3><p>Dízimo, oferta, Pix com QR Code e o informe anual do membro.</p></a>
+          <a class="feature" href="/cadastro-membros-igreja/"><h3>Cadastro de membros</h3><p>Ficha, famílias, grupos e a importação da planilha que a igreja já tem.</p></a>
+          <a class="feature" href="/financeiro-para-igrejas/"><h3>Financeiro para igrejas</h3><p>Receitas, despesas, contas fixas e o fechamento do mês em PDF.</p></a>
+          <a class="feature" href="/site-para-igrejas/"><h3>Site para igrejas</h3><p>Site público com agenda, horários de culto e Pix, incluso nos planos pagos.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Comece hoje, no plano gratuito</h2>
+        <p>Crie a conta da sua igreja em poucos minutos e traga a sua lista de membros da planilha.</p>
+        <a class="btn btn-white btn-lg" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo-badge">
+          <picture>
+            <source srcset="/assets/images/logo-horizontal.webp" type="image/webp" />
+            <img src="/assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="100" height="40" loading="lazy" decoding="async" />
+          </picture>
+        </span>
+        <p>Gestão completa, segura e transparente para a sua igreja — na nuvem.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <a href="/sistema-gestao-igrejas/">Sistema de gestão para igrejas</a>
+        <a href="/controle-dizimos-ofertas/">Controle de dízimos e ofertas</a>
+        <a href="/cadastro-membros-igreja/">Cadastro de membros</a>
+        <a href="/financeiro-para-igrejas/">Financeiro para igrejas</a>
+        <a href="/site-para-igrejas/">Site para igrejas</a>
+        <a href="/prestacao-de-contas-igreja/">Prestação de contas</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="/#planos">Planos e preços</a>
+        <a href="mailto:suporte@portaldaigreja.com.br">suporte@portaldaigreja.com.br</a>
+        <a href="https://wa.me/5527998553591" target="_blank" rel="noopener">💬 WhatsApp: (27) 99855-3591</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="https://app.portaldaigreja.com.br/privacidade">Política de Privacidade</a>
+        <a href="https://app.portaldaigreja.com.br/termos">Termos de Uso</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Portal da Igreja. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5527998553591?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Portal%20da%20Igreja%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+    <span class="wa-tooltip">Fale conosco no WhatsApp</span>
+    <svg class="wa-icon" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+      <path fill="#fff" d="M16.001 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.6 4.46 1.73 6.4L3.2 28.8l6.57-1.72a12.73 12.73 0 0 0 6.23 1.6h.01c7.06 0 12.8-5.74 12.8-12.8s-5.75-12.68-12.81-12.68zm0 23.02h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.9 1.02 1.04-3.8-.25-.4a10.57 10.57 0 0 1-1.62-5.65c0-5.86 4.77-10.62 10.63-10.62 2.84 0 5.5 1.11 7.51 3.12a10.55 10.55 0 0 1 3.11 7.51c0 5.86-4.77 10.63-10.62 10.63zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.39 5.38 4.76.75.32 1.34.51 1.79.66.75.24 1.44.21 1.98.13.6-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/>
+    </svg>
+  </a>
+
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a class="btn btn-primary btn-block" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis →</a>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
