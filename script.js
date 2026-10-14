@@ -123,13 +123,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href*="register-church"]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (typeof gtag === 'function') {
-        gtag('event', 'conversion_cadastro', {
+        // Clique no CTA, não cadastro concluído: o cadastro acontece em app.portaldaigreja.com.br
+        // e só pode ser medido lá. Não marque este evento como conversão de cadastro no GA4.
+        gtag('event', 'cta_cadastro_click', {
           event_category: 'CTA',
-          event_label: btn.textContent.trim()
-        });
-        // Evento de conversão para Google Ads (adicionar tag de conversão do Ads depois)
-        gtag('event', 'conversion', {
-          send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL' // substituir ao criar campanha no Google Ads
+          event_label: btn.textContent.trim(),
+          page_path: location.pathname
         });
       }
     });
@@ -141,7 +140,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (typeof gtag === 'function') {
         gtag('event', 'whatsapp_click', {
           event_category: 'Contato',
-          event_label: 'WhatsApp Flutuante'
+          event_label: btn.getAttribute('aria-label') || btn.textContent.trim() || 'WhatsApp',
+          page_path: location.pathname
         });
       }
     });
@@ -153,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (typeof gtag === 'function') {
         gtag('event', 'login_click', {
           event_category: 'Navegação',
-          event_label: 'Botão Entrar'
+          event_label: 'Botão Entrar',
+          page_path: location.pathname
         });
       }
     });
@@ -174,6 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
-  });
+  }, { passive: true });
 
 });

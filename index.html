@@ -13,11 +13,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal da Igreja — Sistema de Gestão para Igrejas | Dízimo por Pix, Membros, Financeiro e Site</title>
+  <title>Portal da Igreja — Gestão, Dízimo por Pix e Site da Igreja</title>
   <meta name="description"
-    content="Gestão para igrejas: dízimo por Pix com QR Code, membros, financeiro, fechamento do mês, agenda, pedidos de oração e site da igreja incluso. Grátis para começar." />
-  <meta name="keywords"
-    content="sistema de gestão para igrejas, software para igrejas, gestão de membros de igreja, cadastro de membros igreja, controle de dízimos e ofertas, financeiro para igrejas, tesouraria de igreja, fechamento mensal igreja, prestação de contas igreja, relatório financeiro igreja, contas recorrentes igreja, portal do membro, informe de dízimos imposto de renda, site para igreja, criar site de igreja, secretaria de igreja, aniversariantes igreja, LGPD igreja, gestão eclesiástica, app para igreja, dízimo por pix, oferta por pix, QR code pix igreja, pedidos de oração online, agenda de cultos, mural de avisos igreja, células e ministérios, cadastro de famílias igreja" />
+    content="Gestão para igrejas: dízimo por Pix com QR Code, membros, financeiro, fechamento do mês e site da igreja incluso. Grátis para começar." />
   <meta name="author" content="Portal da Igreja" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b1f3a" />
@@ -49,6 +47,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
+  <link rel="icon" href="favicon-48.png" sizes="any" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
 
@@ -133,11 +132,11 @@
       { "@type": "Question", "name": "O site da igreja está incluso?",
         "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todos os planos pagos incluem o site da igreja, com páginas, galeria, horários de culto e contatos, editável sem saber programar." } },
       { "@type": "Question", "name": "Meus dados ficam seguros?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ficam. As informações são criptografadas, o acesso pode exigir confirmação em duas etapas e os dados de cada igreja ficam totalmente separados. Tudo em conformidade com a LGPD." } },
+        "acceptedAnswer": { "@type": "Answer", "text": "Dados sensíveis como CPF, telefone e endereço são criptografados, o acesso pode exigir confirmação em duas etapas e os dados de cada igreja ficam separados dos das demais. Há registro de consentimento, exportação dos dados do membro e trilha de auditoria, como pede a LGPD." } },
       { "@type": "Question", "name": "O plano gratuito tem limite de tempo?",
         "acceptedAnswer": { "@type": "Answer", "text": "Não. O plano gratuito é para sempre, sem cartão de crédito e sem prazo. Você evolui de plano só quando a igreja precisar de mais recursos." } },
       { "@type": "Question", "name": "Posso cancelar a qualquer momento?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim, sem fidelidade nem taxa de cancelamento, e com 30 dias de garantia nos planos pagos." } }
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim, sem fidelidade nem taxa de cancelamento. Você cancela pela tela de assinatura e a conta volta para o plano gratuito, com os seus dados preservados." } }
     ]
   }
   </script>
@@ -157,7 +156,7 @@
       <a href="#hero" class="nav-logo" aria-label="Portal da Igreja - início">
         <picture>
           <source srcset="assets/images/logo-horizontal.webp" type="image/webp" />
-          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="180" height="40" decoding="async" />
+          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="100" height="40" decoding="async" />
         </picture>
       </a>
 
@@ -216,14 +215,14 @@
 
         <!-- Product mockup -->
         <div class="hero-visual">
-          <div class="mockup" role="img" aria-label="Prévia do painel do Portal da Igreja">
+          <div class="mockup" role="img" aria-label="Exemplo ilustrativo do painel do Portal da Igreja, com números fictícios">
             <div class="mockup-bar">
               <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
             </div>
             <div class="mockup-body">
               <div class="mockup-head">
                 <strong>Painel</strong>
-                <span class="pill">Junho 2026</span>
+                <span class="pill">Exemplo</span>
               </div>
               <div class="kpis">
                 <div class="kpi">
@@ -263,64 +262,13 @@
     <!-- ============ TRUST STRIP ============ -->
     <section class="strip">
       <div class="container strip-inner">
-        <span class="strip-item"><strong>🏛️ +500</strong> igrejas</span>
+        <span class="strip-item"><strong>🇧🇷 Feito no Brasil</strong> para igrejas brasileiras</span>
         <span class="strip-sep"></span>
-        <span class="strip-item"><strong>📊 +R$ 2,5 mi</strong> gerenciados</span>
+        <span class="strip-item"><strong>💬 Suporte</strong> em português, por WhatsApp</span>
         <span class="strip-sep"></span>
-        <span class="strip-item"><strong>⭐ Suporte</strong> em português</span>
+        <span class="strip-item"><strong>🆓 Plano gratuito</strong> sem cartão de crédito</span>
         <span class="strip-sep"></span>
-        <span class="strip-item"><strong>✅ LGPD</strong> em conformidade</span>
-      </div>
-    </section>
-
-    <!-- ============ PROVA SOCIAL ============ -->
-    <section class="section testimonials" id="depoimentos">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Prova social</span>
-          <h2>Igrejas que já transformaram a sua gestão</h2>
-          <p>Pastores e tesoureiros que trocaram planilhas e papéis pela tranquilidade do Portal da Igreja.</p>
-        </div>
-
-        <div class="testi-grid">
-          <article class="testi-card">
-            <div class="testi-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
-            <p class="testi-text">"Antes eu passava dois fins de semana por mês fechando o caixa e conferindo dízimos na planilha. Hoje faço isso em minutos e ainda envio o relatório pronto para a diretoria. Economizo pelo menos 8 horas todo mês."</p>
-            <div class="testi-author">
-              <span class="testi-avatar" aria-hidden="true">R</span>
-              <div>
-                <strong>Pr. Ricardo Amaral</strong>
-                <span>Pastor · Igreja Batista Nova Esperança · Vila Velha/ES</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="testi-card">
-            <div class="testi-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
-            <p class="testi-text">"A prestação de contas ficou muito mais transparente. Os membros recebem o informe anual em PDF e as dúvidas sobre as finanças praticamente acabaram. A confiança da igreja na tesouraria aumentou de verdade."</p>
-            <div class="testi-author">
-              <span class="testi-avatar" aria-hidden="true">M</span>
-              <div>
-                <strong>Marcos Tavares</strong>
-                <span>Tesoureiro · Assembleia de Deus Central · Serra/ES</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="testi-card">
-            <div class="testi-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
-            <p class="testi-text">"Migramos de três planilhas diferentes para um sistema só. Cadastro de membros, campanhas e financeiro no mesmo lugar. A equipe aprendeu a usar em um dia e o suporte em português nos atendeu na hora."</p>
-            <div class="testi-author">
-              <span class="testi-avatar" aria-hidden="true">J</span>
-              <div>
-                <strong>Juliana Prado</strong>
-                <span>Secretária Executiva · Comunidade Cristã Vida Plena · Vitória/ES</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <p class="testi-counter">Junte-se a <strong>mais de 500 igrejas</strong> que já organizam a sua gestão com o Portal da Igreja.</p>
+        <span class="strip-item"><strong>📜 LGPD</strong> consentimento e exportação de dados</span>
       </div>
     </section>
 
@@ -415,6 +363,14 @@
             <p>Nascimento e casamento: lembrete todo dia de manhã para a liderança cuidar de quem faz parte da igreja.</p>
           </article>
         </div>
+
+        <p class="pricing-note">Quer ver um módulo por dentro?
+          <a href="/sistema-gestao-igrejas/">Sistema de gestão para igrejas</a> ·
+          <a href="/cadastro-membros-igreja/">Cadastro de membros</a> ·
+          <a href="/controle-dizimos-ofertas/">Dízimos e ofertas</a> ·
+          <a href="/financeiro-para-igrejas/">Financeiro</a> ·
+          <a href="/site-para-igrejas/">Site da igreja</a>
+        </p>
       </div>
     </section>
 
@@ -459,23 +415,23 @@
         <div class="security-grid">
           <article class="sec-card">
             <span class="sec-icon">🔐</span>
-            <h3>Protegidos mesmo em caso de invasão</h3>
-            <p>As informações dos membros e das finanças ficam embaralhadas (criptografadas). Mesmo que alguém tente roubá-las, não conseguirá lê-las.</p>
+            <h3>Dados sensíveis criptografados</h3>
+            <p>CPF, telefone e endereço dos membros ficam embaralhados (criptografados) no banco de dados, e as senhas nunca são guardadas em texto. O acesso ao sistema é sempre por conexão segura.</p>
           </article>
           <article class="sec-card">
             <span class="sec-icon">📱</span>
             <h3>Só você entra na sua conta</h3>
-            <p>Além da senha, o acesso pode pedir um código no seu celular. Assim, ninguém entra no lugar da sua igreja sem a sua permissão.</p>
+            <p>Cada pessoa pode ativar a confirmação em duas etapas: além da senha, o sistema pede um código do celular. Você também vê os aparelhos conectados e pode desconectar qualquer um.</p>
           </article>
           <article class="sec-card">
             <span class="sec-icon">📜</span>
             <h3>Dentro da lei (LGPD)</h3>
-            <p>Seguimos a lei brasileira de proteção de dados. Você decide o que fazer com as informações e pode exportar ou apagar quando quiser.</p>
+            <p>Consentimento registrado por finalidade, termo da sua igreja com versão, exportação dos dados do membro e trilha de auditoria de quem mexeu em quê — como pede a LGPD.</p>
           </article>
           <article class="sec-card">
             <span class="sec-icon">🏛️</span>
             <h3>Cada igreja no seu espaço</h3>
-            <p>Os dados da sua igreja ficam totalmente separados dos de outras igrejas. Ninguém de fora enxerga as suas informações.</p>
+            <p>Os dados de cada igreja ficam separados dos das demais, com a divisão aplicada em duas camadas: no sistema e no próprio banco de dados.</p>
           </article>
         </div>
       </div>
@@ -487,7 +443,7 @@
         <div class="section-head">
           <span class="kicker">Planos</span>
           <h2>Escolha o plano ideal para sua igreja</h2>
-          <p>Comece grátis e evolua conforme a sua igreja cresce.</p>
+          <p>Todos os planos pagos têm os mesmos recursos: o que muda é quantos membros a sua igreja pode cadastrar. O site da igreja está incluso em todos eles.</p>
         </div>
 
         <!-- Toggle Mensal / Anual -->
@@ -507,9 +463,10 @@
             <span class="price-sub" data-monthly="" data-annual="">para sempre</span>
             <ul class="plan-feats">
               <li>Até 50 membros</li>
-              <li>Módulos essenciais</li>
-              <li>Financeiro básico</li>
-              <li>Dashboard inicial</li>
+              <li>Membros, dízimos e financeiro</li>
+              <li>Portal do membro com Pix</li>
+              <li>Relatórios e fechamento do mês</li>
+              <li>Sem o site da igreja</li>
             </ul>
             <a class="btn btn-outline btn-block" href="https://app.portaldaigreja.com.br/register-church">Criar conta
               grátis</a>
@@ -523,17 +480,16 @@
             <span class="price-sub" data-monthly="Cobrança mensal" data-annual="Cobrado anualmente (R$&nbsp;767,04/ano)">Cobrança mensal</span>
             <ul class="plan-feats">
               <li>Até 150 membros</li>
-              <li>Módulos essenciais</li>
-              <li>Financeiro e dashboard</li>
-              <li>Portal do membro com Pix</li>
+              <li>Todos os recursos do sistema</li>
               <li>Site da igreja incluso</li>
+              <li>Usuários da equipe sem limite</li>
+              <li>Suporte por WhatsApp e e-mail</li>
             </ul>
             <a class="btn btn-outline btn-block" href="https://app.portaldaigreja.com.br/register-church">Começar
               agora</a>
           </article>
 
           <article class="plan plan-featured">
-            <span class="plan-badge">Mais popular</span>
             <h3>Crescimento</h3>
             <div class="price">
               <span class="amount" data-monthly="R$ 149,90" data-annual="R$ 119,92">R$ 149,90</span><span class="per">/mês</span>
@@ -541,10 +497,10 @@
             <span class="price-sub" data-monthly="Cobrança mensal" data-annual="Cobrado anualmente (R$&nbsp;1.439,04/ano)">Cobrança mensal</span>
             <ul class="plan-feats">
               <li>Até 500 membros</li>
-              <li>Relatórios completos</li>
-              <li>Campanhas e metas</li>
-              <li>Múltiplos usuários</li>
+              <li>Todos os recursos do sistema</li>
               <li>Site da igreja incluso</li>
+              <li>Usuários da equipe sem limite</li>
+              <li>Suporte por WhatsApp e e-mail</li>
             </ul>
             <a class="btn btn-primary btn-block" href="https://app.portaldaigreja.com.br/register-church">Começar
               agora</a>
@@ -558,10 +514,10 @@
             <span class="price-sub" data-monthly="Cobrança mensal" data-annual="Cobrado anualmente (R$&nbsp;2.879,04/ano)">Cobrança mensal</span>
             <ul class="plan-feats">
               <li>Até 1.000 membros</li>
-              <li>Auditoria avançada</li>
-              <li>Suporte prioritário</li>
-              <li>Exportações avançadas</li>
+              <li>Todos os recursos do sistema</li>
               <li>Site da igreja incluso</li>
+              <li>Usuários da equipe sem limite</li>
+              <li>Suporte por WhatsApp e e-mail</li>
             </ul>
             <a class="btn btn-outline btn-block" href="https://app.portaldaigreja.com.br/register-church">Começar
               agora</a>
@@ -572,11 +528,10 @@
             <div class="price price-quote"><span class="amount">Sob consulta</span></div>
             <span class="price-sub">Para redes e grandes igrejas</span>
             <ul class="plan-feats">
-              <li>Membros ilimitados</li>
-              <li>Recursos personalizados</li>
-              <li>Suporte dedicado &amp; SLA</li>
-              <li>Onboarding assistido</li>
+              <li>Membros sem limite</li>
+              <li>Todos os recursos do sistema</li>
               <li>Site da igreja incluso</li>
+              <li>Condições combinadas com a equipe</li>
             </ul>
             <a class="btn btn-outline btn-block"
               href="mailto:suporte@portaldaigreja.com.br?subject=Plano%20Enterprise">Entrar
@@ -584,7 +539,7 @@
           </article>
         </div>
 
-        <p class="pricing-guarantee">🔒 30 dias de garantia ou seu dinheiro de volta · Cancele quando quiser · Sem taxa de cancelamento</p>
+        <p class="pricing-guarantee">🔒 Plano gratuito para sempre · Cancele quando quiser · Sem fidelidade e sem taxa de cancelamento</p>
 
         <div class="pricing-demo">
           <p>Igreja maior ou precisa de ajuda para escolher?</p>
@@ -629,11 +584,11 @@
           </details>
           <details class="faq-item">
             <summary>Meus dados ficam seguros?</summary>
-            <div class="faq-answer"><p>Ficam. As informações são criptografadas (embaralhadas), o acesso pode exigir confirmação em duas etapas e os dados da sua igreja ficam totalmente separados dos de outras igrejas. Tudo em conformidade com a LGPD.</p></div>
+            <div class="faq-answer"><p>Dados sensíveis como CPF, telefone e endereço são criptografados, o acesso pode exigir confirmação em duas etapas e os dados da sua igreja ficam separados dos de outras igrejas. Há registro de consentimento, exportação dos dados do membro e trilha de auditoria, como pede a LGPD.</p></div>
           </details>
           <details class="faq-item">
             <summary>Posso cancelar a qualquer momento?</summary>
-            <div class="faq-answer"><p>Sim, sem burocracia. Não há fidelidade nem taxa de cancelamento. Você cancela quando quiser e ainda conta com 30 dias de garantia nos planos pagos.</p></div>
+            <div class="faq-answer"><p>Sim, sem burocracia. Não há fidelidade nem taxa de cancelamento: você cancela quando quiser pela própria tela de assinatura e a conta volta para o plano gratuito, com os seus dados preservados.</p></div>
           </details>
           <details class="faq-item">
             <summary>O sistema funciona no celular?</summary>
@@ -649,7 +604,7 @@
           </details>
           <details class="faq-item">
             <summary>Quantos usuários posso cadastrar?</summary>
-            <div class="faq-answer"><p>Depende do plano. Você pode dar acesso a pastores, tesoureiros e secretários, cada um com a sua permissão. Nos planos superiores, é possível cadastrar múltiplos usuários para a equipe toda trabalhar junta.</p></div>
+            <div class="faq-answer"><p>Quantos a sua equipe precisar, em qualquer plano: pastores, tesoureiros, secretários e líderes, cada um com a sua permissão. O que muda de um plano para o outro é o limite de membros cadastrados, não o número de usuários.</p></div>
           </details>
           <details class="faq-item">
             <summary>Como funciona o Portal do Membro?</summary>
@@ -663,7 +618,7 @@
     <section class="cta-band">
       <div class="container cta-inner">
         <h2>Sua igreja merece organização. Comece hoje — é gratuito.</h2>
-        <p>Junte-se a centenas de igrejas que já usam o Portal da Igreja para crescer com mais transparência.</p>
+        <p>Crie a conta da sua igreja em poucos minutos, no plano gratuito, e organize membros, dízimos e finanças com mais transparência.</p>
         <a class="btn btn-white btn-lg" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
       </div>
     </section>
@@ -676,7 +631,7 @@
         <span class="footer-logo-badge">
           <picture>
           <source srcset="assets/images/logo-horizontal.webp" type="image/webp" />
-          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="180" height="40" loading="lazy" decoding="async" />
+          <img src="assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="100" height="40" loading="lazy" decoding="async" />
         </picture>
         </span>
         <p>Gestão completa, segura e transparente para a sua igreja — na nuvem.</p>
@@ -684,15 +639,16 @@
 
       <div class="footer-col">
         <h4>Produto</h4>
-        <a href="#recursos">Recursos</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#planos">Planos</a>
-        <a href="#seguranca">Segurança</a>
+        <a href="/sistema-gestao-igrejas/">Sistema de gestão para igrejas</a>
+        <a href="/controle-dizimos-ofertas/">Controle de dízimos e ofertas</a>
+        <a href="/cadastro-membros-igreja/">Cadastro de membros</a>
+        <a href="/financeiro-para-igrejas/">Financeiro para igrejas</a>
+        <a href="/site-para-igrejas/">Site para igrejas</a>
+        <a href="#planos">Planos e preços</a>
       </div>
 
       <div class="footer-col">
         <h4>Empresa</h4>
-        <a href="#">Sobre</a>
         <a href="#faq">Dúvidas frequentes</a>
         <a href="mailto:suporte@portaldaigreja.com.br">suporte@portaldaigreja.com.br</a>
         <a href="https://wa.me/5527998553591" target="_blank" rel="noopener">💬 WhatsApp: (27) 99855-3591</a>
@@ -700,8 +656,8 @@
 
       <div class="footer-col">
         <h4>Legal</h4>
-        <a href="#">Privacidade</a>
-        <a href="#">Termos</a>
+        <a href="https://app.portaldaigreja.com.br/privacidade">Política de Privacidade</a>
+        <a href="https://app.portaldaigreja.com.br/termos">Termos de Uso</a>
       </div>
     </div>
 
