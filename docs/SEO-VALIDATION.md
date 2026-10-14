@@ -72,6 +72,19 @@ página em inglês.
 4. Em 30 dias, olhar as consultas: separar marca ("portal da igreja") do resto. Só o resto mede
    o efeito deste trabalho.
 
+## 4b. Consentimento de cookies (LGPD)
+
+Confira à mão, numa janela anônima:
+
+1. Abrir a home: o aviso aparece e **nada** de GA4 medindo nem chat carregado (o Consent Mode
+   entra negado; dá para ver em DevTools → Network, sem requisição ao monitchat).
+2. Clicar em **Aceitar**: o chat carrega e o GA4 passa a medir.
+3. Navegar para outra página: o aviso **não** volta.
+4. Em outra janela anônima, clicar em **Recusar**: nada carrega e a escolha é lembrada.
+5. Repetir em `/en/`: o aviso aparece em inglês.
+
+Para testar de novo do zero, limpe o `localStorage` do site (chave `consent:v1`).
+
 ## 5. Medição de conversão — o que ainda não é confiável
 
 O site mede **cliques** no CTA (`cta_cadastro_click`), não cadastros: o cadastro acontece em

@@ -178,3 +178,91 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { passive: true });
 
 });
+
+// ============ Consentimento de cookies (LGPD) ============
+// Sem aceite, nada de medição nem de chat: o Consent Mode já entra negado no
+// <head> e só é liberado aqui. A escolha fica no navegador da pessoa
+// (localStorage), por isso o banner não volta a cada página.
+(function () {
+  var KEY = 'consent:v1';
+  var CHAT = 'https://alb.monitchat.com/widget/wgt_ltXBSBKMhad1VKpQtTPL5LOC8bv3.js';
+  // O chat existe só nas páginas onde já existia antes: home (pt/en) e /whatsapp/.
+  var CHAT_PAGES = ['/', '/en/', '/whatsapp/', '/index.html', '/en/index.html'];
+  var pt = (document.documentElement.lang || 'pt').toLowerCase().indexOf('pt') === 0;
+
+  var TXT = pt ? {
+    text: 'Usamos cookies para entender como o site é usado e para o atendimento pelo chat. ' +
+          'Você escolhe: nada é carregado antes do seu aceite.',
+    accept: 'Aceitar', reject: 'Recusar', policy: 'Política de Privacidade',
+    label: 'Aviso de cookies'
+  } : {
+    text: 'We use cookies to understand how this site is used and to run the support chat. ' +
+          'It is your call: nothing loads before you accept.',
+    accept: 'Accept', reject: 'Decline', policy: 'Privacy Policy',
+    label: 'Cookie notice'
+  };
+
+  function read() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function save(value) {
+    try { localStorage.setItem(KEY, value); } catch (e) { /* navegação privada */ }
+  }
+
+  function loadChat() {
+    var path = location.pathname;
+    if (CHAT_PAGES.indexOf(path) === -1) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = CHAT;
+    document.body.appendChild(s);
+  }
+
+  function grant() {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+    loadChat();
+  }
+
+  function banner() {
+    var box = document.createElement('div');
+    box.className = 'cookie-bar';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-label', TXT.label);
+    var p = document.createElement('p');
+    p.textContent = TXT.text + ' ';
+    var link = document.createElement('a');
+    link.href = 'https://app.portaldaigreja.com.br/privacidade';
+    link.textContent = TXT.policy;
+    p.appendChild(link);
+    var actions = document.createElement('div');
+    actions.className = 'cookie-actions';
+    var no = document.createElement('button');
+    no.type = 'button';
+    no.className = 'btn btn-ghost';
+    no.textContent = TXT.reject;
+    var yes = document.createElement('button');
+    yes.type = 'button';
+    yes.className = 'btn btn-primary';
+    yes.textContent = TXT.accept;
+    function close() {
+      document.body.classList.remove('cookie-open');
+      box.remove();
+    }
+    no.addEventListener('click', function () { save('denied'); close(); });
+    yes.addEventListener('click', function () { save('granted'); grant(); close(); });
+    actions.appendChild(no);
+    actions.appendChild(yes);
+    box.appendChild(p);
+    box.appendChild(actions);
+    document.body.appendChild(box);
+    // Enquanto o aviso está aberto, some com o botão do WhatsApp e com a barra
+    // fixa do celular: eles cobrem o botão "Aceitar" em telas pequenas.
+    document.body.classList.add('cookie-open');
+    yes.focus();
+  }
+
+  var choice = read();
+  if (choice === 'granted') { grant(); } else if (choice !== 'denied') { banner(); }
+})();

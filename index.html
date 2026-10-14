@@ -8,6 +8,15 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // LGPD: nada de medição antes do aceite. O Consent Mode segura o GA4 até o
+    // visitante decidir no banner (ver script.js).
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
     gtag('config', 'G-F49Y1WNQ4H');
   </script>
 
@@ -690,9 +699,6 @@
   </div>
 
   <script src="script.js"></script>
-  <!-- Chat widget (Monitchat) — renders its own bubble bottom-right. Loaded async so it never
-       blocks the page; keep it as the last script so it can't delay script.js. -->
-  <script async src="https://alb.monitchat.com/widget/wgt_ltXBSBKMhad1VKpQtTPL5LOC8bv3.js"></script>
 </body>
 
 </html>

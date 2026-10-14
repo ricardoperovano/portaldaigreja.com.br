@@ -300,6 +300,15 @@ TEMPLATE = """<!DOCTYPE html>
     window.dataLayer = window.dataLayer || [];
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
+    // LGPD: nada de medição antes do aceite. O Consent Mode segura o GA4 até o
+    // visitante decidir no banner (ver script.js).
+    gtag('consent', 'default', {{
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    }});
     gtag('config', 'G-F49Y1WNQ4H');
   </script>
 

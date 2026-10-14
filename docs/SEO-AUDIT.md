@@ -25,12 +25,12 @@ críticos voltar.
 | 13 | Proporção declarada do logo errada (180×40 para uma imagem 1135×455) | `index.html:160` | Atributos corrigidos para 100×40 (proporção real), reduzindo deslocamento de layout |
 | 14 | `favicon.ico` inexistente (404 em todo acesso) | — | Declarado `favicon-48.png` como ícone padrão |
 | 15 | Nenhuma página além da home: tudo competia numa URL só | — | Cinco páginas comerciais criadas (ver `docs/SEO-STRATEGY.md`), com links internos entre elas e a partir da home |
+| 16 | **Sem consentimento de cookies**: GA4 e o chat Monitchat carregavam antes de qualquer aviso | `index.html:5-12,732` | Google Consent Mode entra **negado** no `<head>` de todas as páginas; o banner (em português e em inglês) pergunta antes, e só depois do aceite o GA4 é liberado e o chat é carregado. A escolha fica no navegador da pessoa; recusar não carrega nada |
 
 ## 2. Pendente — depende de você
 
 | # | Pendência | Por que importa | Como resolver |
 |---|---|---|---|
-| A | **Consentimento de cookies.** GA4 e o chat Monitchat carregam antes de qualquer aviso, e o site não tem política própria | Risco de LGPD: há coleta por terceiros sem base informada | Banner de consentimento com Consent Mode, ou carregar GA4/chat só após aceite |
 | B | **"Enforce HTTPS" do GitHub Pages aparentemente desligado**: `http://portaldaigreja.com.br` responde 200 sem redirecionar | Conteúdo duplicado e aviso de site não seguro | Ligar em Settings → Pages → Enforce HTTPS |
 | C | **`www` não resolve** | Quem digita www não chega ao site | Criar o CNAME de `www` apontando para o apex |
 | D | **Conversão real não é medida.** O cadastro acontece em `app.portaldaigreja.com.br`, domínio diferente, sem medição ligada | Hoje não dá para saber quantos cadastros o site gerou | Medir o evento de cadastro concluído no app e ligar os dois domínios no GA4 |

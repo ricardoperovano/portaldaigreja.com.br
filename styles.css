@@ -422,3 +422,23 @@ img { max-width: 100%; display: block; }
   /* lift WhatsApp button above sticky CTA when visible so they don't collide */
   body.sticky-active .wa-float { bottom: 154px; }
 }
+
+/* Aviso de cookies (LGPD) — aparece uma vez, por cima do rodapé fixo do celular. */
+.cookie-bar {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60;
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  max-width: 880px; margin: 0 auto; padding: 18px 22px;
+  background: #fff; border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: var(--shadow-md); font-size: .9rem; color: var(--text);
+}
+.cookie-bar p { margin: 0; flex: 1 1 320px; }
+.cookie-actions { display: flex; gap: 10px; flex: 0 0 auto; }
+.cookie-actions .btn { padding: 10px 18px; font-size: .9rem; }
+@media (max-width: 640px) {
+  .cookie-bar { bottom: 84px; padding: 16px; }
+  .cookie-actions { width: 100%; }
+  .cookie-actions .btn { flex: 1; }
+}
+
+body.cookie-open .wa-float,
+body.cookie-open .sticky-cta { display: none; }
