@@ -33,7 +33,7 @@ HEAD = f"""  <meta charset="UTF-8" />
   <meta name="description" content="{DESCRIPTION}" />
   <meta name="author" content="Portal da Igreja" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#0b1f3a" />
+  <meta name="theme-color" content="#0F2D4A" />
 
   <link rel="canonical" href="{SITE}/en/" />
   <link rel="alternate" hreflang="pt-BR" href="{SITE}/" />
@@ -46,7 +46,7 @@ HEAD = f"""  <meta charset="UTF-8" />
   <meta property="og:url" content="{SITE}/en/" />
   <meta property="og:title" content="{TITLE}" />
   <meta property="og:description" content="{DESCRIPTION}" />
-  <meta property="og:image" content="{SITE}/assets/images/og-image.jpg" />
+  <meta property="og:image" content="{SITE}/assets/brand/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Portal da Igreja — church management software" />
@@ -54,9 +54,10 @@ HEAD = f"""  <meta charset="UTF-8" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{TITLE}" />
   <meta name="twitter:description" content="{DESCRIPTION}" />
-  <meta name="twitter:image" content="{SITE}/assets/images/og-image.jpg" />
+  <meta name="twitter:image" content="{SITE}/assets/brand/og-image.png" />
 
   <link rel="icon" href="/favicon-48.png" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
@@ -64,7 +65,7 @@ HEAD = f"""  <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 

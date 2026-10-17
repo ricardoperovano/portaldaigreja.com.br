@@ -1,0 +1,90 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "brand": "Portal da Igreja",
+  "version": "1.0.0",
+  "color": {
+    "brand": {
+      "primary": "#0F2D4A",
+      "primaryHover": "#19466E",
+      "primaryDeep": "#091E32",
+      "accent": "#C6A664",
+      "accentText": "#86642D",
+      "ivory": "#F7F5EF",
+      "slate": "#4B6478",
+      "sky": "#6FA9DD"
+    },
+    "ui": {
+      "background": "#F5F7F9",
+      "surface": "#FFFFFF",
+      "marketingBackground": "#F7F5EF",
+      "text": "#172B3D",
+      "textMuted": "#5A6F81",
+      "border": "#DEE5EA",
+      "focus": "#2779B7",
+      "sidebarBackground": "#0F2D4A",
+      "sidebarActive": "#24557C",
+      "sidebarText": "#F0F5F8"
+    },
+    "state": {
+      "success": "#168157",
+      "successBackground": "#E7F6ED",
+      "warning": "#906013",
+      "warningBackground": "#FFF3DC",
+      "danger": "#B83E49",
+      "dangerBackground": "#FDEDEF"
+    }
+  },
+  "typography": {
+    "family": {
+      "display": "Manrope, Inter, sans-serif",
+      "body": "Inter, sans-serif"
+    },
+    "weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "scale": {
+      "xs": "12px",
+      "sm": "14px",
+      "base": "16px",
+      "lg": "18px",
+      "xl": "20px",
+      "h3": "24px",
+      "h2": "32px",
+      "h1": "clamp(36px, 4vw, 56px)"
+    }
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "16px",
+    "xl": "24px"
+  },
+  "spacing": {
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "12": "48px",
+    "16": "64px"
+  },
+  "shadow": {
+    "sm": "0 2px 8px rgba(15,45,74,.06)",
+    "md": "0 10px 35px rgba(15,45,74,.10)"
+  },
+  "layout": {
+    "contentMax": "1200px",
+    "sidebarDesktop": "256px",
+    "headerHeight": "72px"
+  },
+  "motion": {
+    "short": "150ms",
+    "normal": "220ms",
+    "reducedMotion": "respect prefers-reduced-motion"
+  }
+}

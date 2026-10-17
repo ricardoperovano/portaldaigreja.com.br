@@ -317,7 +317,7 @@ TEMPLATE = """<!DOCTYPE html>
   <title>{title}</title>
   <meta name="description" content="{description}" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#0b1f3a" />
+  <meta name="theme-color" content="#0F2D4A" />
   <link rel="canonical" href="{url}" />
 {hreflang}
 
@@ -327,7 +327,7 @@ TEMPLATE = """<!DOCTYPE html>
   <meta property="og:url" content="{url}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
-  <meta property="og:image" content="{site}/assets/images/og-image.jpg" />
+  <meta property="og:image" content="{site}/assets/brand/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Portal da Igreja — sistema de gestão para igrejas" />
@@ -335,9 +335,10 @@ TEMPLATE = """<!DOCTYPE html>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{title}" />
   <meta name="twitter:description" content="{description}" />
-  <meta name="twitter:image" content="{site}/assets/images/og-image.jpg" />
+  <meta name="twitter:image" content="{site}/assets/brand/og-image.png" />
 
   <link rel="icon" href="/favicon-48.png" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
@@ -345,7 +346,7 @@ TEMPLATE = """<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 
@@ -356,10 +357,7 @@ TEMPLATE = """<!DOCTYPE html>
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="/" class="nav-logo" aria-label="Portal da Igreja - início">
-        <picture>
-          <source srcset="/assets/images/logo-horizontal.webp" type="image/webp" />
-          <img src="/assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="100" height="40" decoding="async" />
-        </picture>
+        <img src="/assets/brand/logo-horizontal.svg" alt="Portal da Igreja — sistema de gestão para igrejas" width="134" height="40" decoding="async" />
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
@@ -416,10 +414,7 @@ TEMPLATE = """<!DOCTYPE html>
     <div class="container footer-grid">
       <div class="footer-brand">
         <span class="footer-logo-badge">
-          <picture>
-            <source srcset="/assets/images/logo-horizontal.webp" type="image/webp" />
-            <img src="/assets/images/logo-horizontal.png" alt="Portal da Igreja — sistema de gestão para igrejas" width="100" height="40" loading="lazy" decoding="async" />
-          </picture>
+          <img src="/assets/brand/logo-horizontal-branco.svg" alt="Portal da Igreja — sistema de gestão para igrejas" width="134" height="40" loading="lazy" decoding="async" />
         </span>
         <p>{c_brand_p}</p>
       </div>

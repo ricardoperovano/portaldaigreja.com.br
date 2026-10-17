@@ -1,0 +1,45 @@
+/* Portal da Igreja — Brand Kit 1.0 | aplicar primeiro como camada visual, sem modificar regras de negocio */
+:root {
+  --pdi-brand-primary: #0F2D4A;
+  --pdi-brand-primary-hover: #19466E;
+  --pdi-brand-primary-deep: #091E32;
+  --pdi-brand-gold: #C6A664;
+  --pdi-brand-gold-text: #86642D;
+  --pdi-brand-ivory: #F7F5EF;
+  --pdi-brand-slate: #4B6478;
+  --pdi-brand-sky: #6FA9DD;
+  --pdi-ui-bg: #F5F7F9;
+  --pdi-ui-surface: #FFFFFF;
+  --pdi-ui-text: #172B3D;
+  --pdi-ui-text-muted: #5A6F81;
+  --pdi-ui-border: #DEE5EA;
+  --pdi-ui-focus: #2779B7;
+  --pdi-ui-sidebar: #0F2D4A;
+  --pdi-ui-sidebar-active: #24557C;
+  --pdi-state-success: #168157;
+  --pdi-state-success-bg: #E7F6ED;
+  --pdi-state-warning: #906013;
+  --pdi-state-warning-bg: #FFF3DC;
+  --pdi-state-danger: #B83E49;
+  --pdi-state-danger-bg: #FDEDEF;
+  --pdi-radius-card: 16px;
+  --pdi-radius-control: 10px;
+  --pdi-radius-pill: 999px;
+  --pdi-shadow-card: 0 10px 35px rgba(15,45,74,.08);
+  --pdi-font-display: "Manrope", "Inter", system-ui, sans-serif;
+  --pdi-font-body: "Inter", system-ui, sans-serif;
+  --pdi-container: 1200px;
+}
+/* Exemplo (adaptar aos componentes existentes): */
+.pdi-marketing { background:var(--pdi-brand-ivory); color:var(--pdi-ui-text); font-family:var(--pdi-font-body); }
+.pdi-app { background:var(--pdi-ui-bg); color:var(--pdi-ui-text); font-family:var(--pdi-font-body); }
+.pdi-button-primary { background:var(--pdi-brand-primary);color:#fff;border:1px solid transparent;border-radius:var(--pdi-radius-control);padding:12px 18px;font-weight:600;cursor:pointer; }
+.pdi-button-primary:hover { background:var(--pdi-brand-primary-hover); }
+.pdi-button-primary:focus-visible { outline:3px solid var(--pdi-ui-focus);outline-offset:3px; }
+.pdi-button-secondary { background:transparent;color:var(--pdi-brand-primary);border:1px solid var(--pdi-brand-primary);border-radius:var(--pdi-radius-control);padding:12px 18px; }
+.pdi-card {background:var(--pdi-ui-surface);border:1px solid var(--pdi-ui-border);border-radius:var(--pdi-radius-card);box-shadow:var(--pdi-shadow-card);}
+.pdi-sidebar {background:var(--pdi-ui-sidebar);color:#F0F5F8;}
+.pdi-sidebar .is-active {background:var(--pdi-ui-sidebar-active);color:#fff;}
+.pdi-input {background:#fff;color:var(--pdi-ui-text);border:1px solid var(--pdi-ui-border);border-radius:var(--pdi-radius-control);padding:10px 12px;}
+.pdi-input:focus-visible { outline:3px solid var(--pdi-ui-focus);outline-offset:1px; }
+@media (prefers-reduced-motion:reduce){.pdi-marketing *, .pdi-app *{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;}}
