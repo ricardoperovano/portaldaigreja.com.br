@@ -122,7 +122,7 @@ CHROME = {
         "nav": None, "related": None, "related_sub": None,
         "login": "Entrar", "signup": "Criar conta grátis",
         "plans": "Ver planos e preços", "plans_href": "/#planos",
-        "badge": "✅ Plano gratuito até 50 membros · Sem cartão de crédito",
+        "badge": "Plano gratuito até 50 membros · Sem cartão de crédito",
         "faq_kicker": "Dúvidas frequentes", "faq_h2": "Perguntas de quem está avaliando",
         "related_kicker": "Veja também", "related_h2": "Outras partes do sistema",
         "cta_h2": "Comece hoje, no plano gratuito",
@@ -130,7 +130,7 @@ CHROME = {
         "brand_p": "Gestão completa, segura e transparente para a sua igreja — na nuvem.",
         "f_product": "Produto", "f_company": "Empresa", "f_legal": "Legal",
         "f_plans": "Planos e preços", "privacy": "Política de Privacidade", "terms": "Termos de Uso",
-        "wa_label": "Fale conosco no WhatsApp", "wa_footer": "💬 WhatsApp: (27) 99855-3591",
+        "wa_label": "Fale conosco no WhatsApp", "wa_footer": "WhatsApp: (27) 99855-3591",
         "notice": "", "switch": "English", "switch_label": "Read this page in English",
         "rights": "© 2026 Portal da Igreja. Todos os direitos reservados.",
     },
@@ -139,7 +139,7 @@ CHROME = {
         "nav": None, "related": None, "related_sub": None,
         "login": "Sign in", "signup": "Create free account",
         "plans": "See plans and prices", "plans_href": "/en/#plans",
-        "badge": "✅ Free plan for up to 50 members · No credit card",
+        "badge": "Free plan for up to 50 members · No credit card",
         "faq_kicker": "Frequently asked", "faq_h2": "Questions from churches considering us",
         "related_kicker": "See also", "related_h2": "Other parts of the system",
         "cta_h2": "Start today, on the free plan",
@@ -147,7 +147,7 @@ CHROME = {
         "brand_p": "Church management, giving and website in one system — in the cloud.",
         "f_product": "Product", "f_company": "Company", "f_legal": "Legal",
         "f_plans": "Plans and prices", "privacy": "Privacy Policy", "terms": "Terms of Use",
-        "wa_label": "Talk to us on WhatsApp", "wa_footer": "💬 WhatsApp: +55 27 99855-3591",
+        "wa_label": "Talk to us on WhatsApp", "wa_footer": "WhatsApp: +55 27 99855-3591",
         "notice": NOTICE_EN, "switch": "Português", "switch_label": "Leia esta página em português",
         "rights": "© 2026 Portal da Igreja. All rights reserved.",
     },
@@ -157,6 +157,12 @@ CHROME["en"].update(pages=PAGES_EN, nav=NAV_LABELS_EN, related=RELATED_LABELS_EN
                     related_sub=RELATED_SUB_EN)
 
 # --------------------------------------------------------------- template
+def icon(name: str) -> str:
+    """Ícone do sprite assets/brand/icons.svg (Lucide). Decorativo: o texto ao lado diz o que é."""
+    return (f'<svg class="ic" aria-hidden="true" focusable="false">'
+            f'<use href="/assets/brand/icons.svg#{name}"/></svg>')
+
+
 def esc(text: str) -> str:
     """Escapa para HTML, preservando as poucas tags que o conteúdo usa."""
     out = html.escape(text, quote=False)
@@ -190,13 +196,13 @@ def render_blocks(blocks: list[dict]) -> str:
         elif b["type"] == "features":
             cards = []
             for item in b["items"]:
-                icon, tone, name = item[0], item[1], item[2]
+                name_icon, tone, name = item[0], item[1], item[2]
                 desc = item[3] if len(item) > 3 and item[3] else b.get("plain", {}).get(name, "")
                 link = item[4] if len(item) > 4 else None
                 more = (f'\n            <p><a href="{link}">{esc(name)} →</a></p>'
                         if link else "")
                 cards.append(f'''          <article class="feature">
-            <span class="feat-icon {tone}">{icon}</span>
+            <span class="feat-icon {tone}">{icon(name_icon)}</span>
             <h3>{esc(name)}</h3>
             <p>{esc(desc)}</p>{more}
           </article>''')
@@ -395,7 +401,7 @@ TEMPLATE = """<!DOCTYPE html>
             <a class="btn btn-primary btn-lg" href="{signup}">{c_signup}</a>
             <a class="btn btn-outline btn-lg" href="{plans_href}">{c_plans}</a>
           </div>
-          <p class="hero-badge">{c_badge}</p>
+          <p class="hero-badge">{ic_check}{c_badge}</p>
         </div>
       </div>
     </section>
@@ -427,7 +433,7 @@ TEMPLATE = """<!DOCTYPE html>
         <h4>{c_f_company}</h4>
         <a href="{plans_href}">{c_f_plans}</a>
         <a href="mailto:suporte@portaldaigreja.com.br">suporte@portaldaigreja.com.br</a>
-        <a href="https://wa.me/5527998553591" target="_blank" rel="noopener">{c_wa_footer}</a>
+        <a href="https://wa.me/5527998553591" target="_blank" rel="noopener">{ic_wa}{c_wa_footer}</a>
         <a href="{switch_href}" hreflang="{switch_lang}" lang="{switch_lang}">{c_switch}</a>
       </div>
 
@@ -497,7 +503,8 @@ def build() -> list[str]:
                 c_cta_h2=c["cta_h2"], c_cta_p=c["cta_p"], c_brand_p=c["brand_p"],
                 c_f_product=c["f_product"], c_f_company=c["f_company"], c_f_legal=c["f_legal"],
                 c_f_plans=c["f_plans"], c_privacy=c["privacy"], c_terms=c["terms"],
-                c_wa_label=c["wa_label"], c_wa_footer=c["wa_footer"], c_rights=c["rights"])
+                c_wa_label=c["wa_label"], c_wa_footer=c["wa_footer"],
+                ic_check=icon("circle-check"), ic_wa=icon("message-circle"), c_rights=c["rights"])
             out = ROOT / c["prefix"].strip("/") / slug / "index.html" if c["prefix"] else \
                 ROOT / slug / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)

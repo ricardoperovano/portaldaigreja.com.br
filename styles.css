@@ -55,6 +55,16 @@ img { max-width: 100%; display: block; }
 
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
 
+/* ====================== Ícones (sprite assets/brand/icons.svg, Lucide) ====================== */
+.ic {
+  width: 1.1em; height: 1.1em; flex: none; vertical-align: -0.2em;
+  fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round;
+}
+.hero-badge .ic, .trust-line .ic, .strip-item .ic, .pricing-guarantee .ic, .footer-col a .ic { margin-right: .45em; }
+.hero-badge .ic { color: var(--accent-text); }
+.strip-item .ic, .footer-col a .ic { color: var(--accent); }
+.pricing-guarantee .ic { color: var(--primary); }
+
 /* ====================== Buttons ====================== */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -110,7 +120,11 @@ img { max-width: 100%; display: block; }
 
 /* ====================== Hero ====================== */
 .hero {
-  background: var(--ivory);
+  /* Arcos abstratos do kit, em baixa intensidade, atrás do painel de exemplo. */
+  background:
+    linear-gradient(rgba(247, 245, 239, .5), rgba(247, 245, 239, .5)),
+    url("assets/brand/hero-arquitetura-abstrata.svg") right bottom / auto 100% no-repeat,
+    var(--ivory);
   padding: 84px 0 96px;
 }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
@@ -188,8 +202,9 @@ img { max-width: 100%; display: block; }
 .feature:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
 .feat-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 52px; height: 52px; border-radius: 14px; font-size: 1.5rem; margin-bottom: 16px;
+  width: 52px; height: 52px; border-radius: 14px; margin-bottom: 16px;
 }
+.feat-icon .ic { width: 24px; height: 24px; }
 .ic-blue, .ic-green { background: var(--primary-tint); color: var(--primary); }
 .feature h3 { font-size: 1.12rem; margin-bottom: 8px; }
 .feature p { color: var(--muted); font-size: .94rem; }
@@ -207,6 +222,14 @@ img { max-width: 100%; display: block; }
   color: var(--primary); background: #fff; border: 1.5px solid var(--accent); margin-bottom: 18px; font-size: 1.2rem;
 }
 .step h3 { font-size: 1.15rem; margin-bottom: 8px; }
+/* Seta fina entre os passos (só quando estão lado a lado). */
+@media (min-width: 981px) {
+  .steps-grid .step:not(:last-child)::after {
+    content: ""; position: absolute; top: 50%; right: -17px; width: 10px; height: 10px;
+    border-top: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent);
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
 .step p { color: var(--muted); font-size: .96rem; }
 
 /* ====================== Security ====================== */
@@ -220,7 +243,11 @@ img { max-width: 100%; display: block; }
   transition: transform .2s, background .2s;
 }
 .sec-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, .08); border-color: rgba(198, 166, 100, .45); }
-.sec-icon { font-size: 1.7rem; display: block; margin-bottom: 14px; }
+.sec-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; margin-bottom: 16px;
+  border-radius: 12px; color: var(--accent); background: rgba(255, 255, 255, .06); border: 1px solid rgba(198, 166, 100, .35);
+}
+.sec-icon .ic { width: 22px; height: 22px; }
 .sec-card h3 { color: #fff; font-size: 1.08rem; margin-bottom: 8px; }
 .sec-card p { color: rgba(255, 255, 255, .78); font-size: .92rem; }
 
@@ -291,6 +318,8 @@ img { max-width: 100%; display: block; }
 
 /* ====================== Responsive ====================== */
 @media (max-width: 980px) {
+  /* Empilhado, a ilustração passaria atrás do texto: marfim liso. */
+  .hero { background: var(--ivory); }
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .hero-visual { max-width: 520px; margin: 0 auto; }
   .steps-grid { grid-template-columns: 1fr; }
@@ -341,7 +370,8 @@ img { max-width: 100%; display: block; }
 /* ====================== Features hierarchy ====================== */
 .features-highlight { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 24px; }
 .feature-lg { padding: 34px 30px; }
-.feature-lg .feat-icon { width: 62px; height: 62px; font-size: 1.85rem; border-radius: 16px; }
+.feature-lg .feat-icon { width: 60px; height: 60px; border-radius: 16px; }
+.feature-lg .feat-icon .ic { width: 28px; height: 28px; }
 .feature-lg h3 { font-size: 1.3rem; margin-bottom: 10px; }
 .feature-lg p { font-size: 1rem; }
 .feature-accent { border-color: rgba(198, 166, 100, .55); box-shadow: var(--shadow-md); background: linear-gradient(180deg, var(--ivory) 0%, #fff 60%); }
