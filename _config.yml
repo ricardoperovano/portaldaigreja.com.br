@@ -1,0 +1,6 @@
+# GitHub Pages (build "legacy", Jekyll). O site é HTML pronto; este arquivo só
+# impede que material interno vá para o ar junto com ele.
+exclude:
+  - docs         # auditorias de SEO, catálogo e kit de marca (inclui o prompt mestre)
+  - tools        # geradores e verificador de SEO
+  - teste-claude.code-workspace
