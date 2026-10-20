@@ -5,15 +5,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://portaldaigreja.com.br/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/sistema-gestao-igrejas/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/controle-dizimos-ofertas/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/cadastro-membros-igreja/</loc>
@@ -21,15 +21,19 @@
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/financeiro-para-igrejas/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/prestacao-de-contas-igreja/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/site-para-igrejas/</loc>
     <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://portaldaigreja.com.br/controle-patrimonio-igreja/</loc>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/whatsapp/</loc>
@@ -37,11 +41,11 @@
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/church-management-software/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/church-member-database/</loc>
@@ -49,15 +53,19 @@
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/church-tithes-offerings/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/church-accounting-software/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/church-financial-reports/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://portaldaigreja.com.br/en/church-asset-management/</loc>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://portaldaigreja.com.br/en/church-website-builder/</loc>

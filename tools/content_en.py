@@ -49,11 +49,16 @@ PAGES: list[dict] = [
                  ("file-text", "ic-blue", "Financial accountability",
                   "The board report, the transparency report with no donor names and each member's annual giving statement.",
                   "/en/church-financial-reports/"),
+                 ("package", "ic-green", "Church assets",
+                  "Sound systems, instruments, chairs, computers and vehicles recorded with location, photo and value, plus the total the church has invested.",
+                  "/en/church-asset-management/"),
+                 ("key", "ic-blue", "Roles for each job", None),
                  ("receipt", "ic-blue", "Member portal", None),
                  ("calendar", "ic-blue", "Calendar and notices", None),
                  ("heart", "ic-green", "Prayer requests", None),
              ],
              "plain": {
+                 "Roles for each job": "Everyone on the team signs in with their own login and a role. The secretary looks after members and the calendar without seeing any amounts; the treasurer looks after the money without opening the member records.",
                  "Member portal": "Each member signs in, sees what they have given, downloads the annual statement as a PDF, sends a prayer request and reads the notices.",
                  "Calendar and notices": "Services and events entered once show up on the dashboard, in the member portal and on the church website. The notice board highlights what is urgent.",
                  "Prayer requests": "The request reaches the leadership, who mark it as being prayed for and can send an answer back to the member.",
@@ -82,7 +87,7 @@ PAGES: list[dict] = [
             ("Can we bring the list of members we already have?",
              "Yes. The import assistant reads Excel (.xlsx, .xls) and CSV files, suggests which field each column maps to and shows everything for you to review before saving. Duplicates are blocked by document number, e-mail or name."),
             ("How many people from our team can use it?",
-             "As many as the church needs, on any plan. Pastor, treasurer and secretary get separate logins with their own permissions. The plan limit is on registered members, not on users."),
+             "As many as the church needs, on any plan. Each person has their own login and a role: administrator, manager, secretary, treasurer or operator. The secretary handles members and the calendar without seeing amounts, and the treasurer handles the money without opening the member records. The plan limit is on registered members, not on users."),
         ],
     },
     {
@@ -182,7 +187,7 @@ PAGES: list[dict] = [
             ("What about offerings with no name on them?",
              "There is an \"anonymous offering\" type for exactly that. It counts towards the church's offering totals without inventing a member."),
             ("Who can see how much each person gave?",
-             "Only people with administration or management permission. The report shared with the congregation shows totals only, with no names."),
+             "The leadership, the treasurer and the operators who record contributions. The secretary role sees no amounts, and each member sees only what they gave. The report shared with the congregation shows totals only, with no names."),
         ],
     },
     {
@@ -227,7 +232,7 @@ PAGES: list[dict] = [
             ("Can I get a report for the board meeting?",
              "Yes. The monthly closing comes out as a PDF with letterhead, numbered pages and the comparison with the previous month. The report by category also has signature lines."),
             ("Who on the team can see the finances?",
-             "Only people with administration or management permission. Operators and members have no access to the treasury."),
+             "The leadership and the treasurer role record income and expenses and run the reports. Operators record tithes and offerings and can look up entries, without changing the accounts. The secretary and members have no access to the finances."),
             ("Which currency does it use?",
              "Brazilian reais. Entries in another currency can be recorded, but the system does not convert currencies."),
         ],
@@ -271,16 +276,16 @@ PAGES: list[dict] = [
              }},
             {"type": "prose", "kicker": "Who sees what", "h2": "Each report for the right audience",
              "paras": [
-                 "Per-person amounts stay with people who have administration or management "
-                 "permission. Operators and members have no access to the treasury, and the report "
-                 "shared with the congregation never carries names.",
+                 "Per-person amounts stay with the leadership, the treasurer and whoever records "
+                 "contributions. The secretary and members see no amounts, and the report shared "
+                 "with the congregation never carries names.",
                  "For the accountant, entries, contributions and campaigns export to CSV. Portal da "
                  "Igreja does not replace accounting and issues no tax documents: it organises the "
                  "numbers and hands over the report."]},
         ],
         "faq": [
             ("Can we show the accounts without exposing who gave?",
-             "Yes, and that is the default. The transparency report shows monthly totals, with no names and no individual amounts. Per-person giving is visible only to people with treasury or leadership permission."),
+             "Yes, and that is the default. The transparency report shows monthly totals, with no names and no individual amounts. Per-person giving is visible only to the leadership, the treasurer and whoever records contributions."),
             ("Is the report good enough for a board meeting?",
              "Yes. The monthly closing comes out as a PDF with letterhead, numbered pages, the comparison with the previous month, expenses by category and the largest outflows. The report by category adds signature lines."),
             ("What if someone questions an entry?",
@@ -350,6 +355,70 @@ PAGES: list[dict] = [
              "Connecting your own domain is arranged case by case with our team. Talk to us on WhatsApp before subscribing."),
             ("Will the site help our church show up on Google?",
              "Not on its own. These sites are rendered for visitors rather than for search engines, and they carry no per-church meta tags or sitemap. Treat it as the page you share, not as a search strategy."),
+        ],
+    },
+    {
+        "slug": "church-asset-management",
+        "title": "Church Asset Management Software | Portal da Igreja",
+        "description": ("Record church equipment and property with category, location, photo "
+                        "and value, see how much is invested and retire items without losing history."),
+        "kicker": "Church assets",
+        "h1": "Church asset management: what the church owns, where it is and what it is worth",
+        "lead": ("Speakers, the mixing desk, instruments, chairs, pews, computers, the fridge and "
+                 "the van, all in one place with location, photo and value. The church finally "
+                 "knows what it owns and how much it has invested in each area."),
+        "blocks": [
+            {"type": "prose", "kicker": "The problem", "h2": "Nobody is quite sure what the church owns",
+             "paras": [
+                 "Equipment arrives bit by bit: a donation here, a purchase from a campaign there, a "
+                 "microphone someone brought from home. Years later nobody can say how many chairs "
+                 "there are, where the projector went or what the sanctuary contents are worth.",
+                 "The asset module keeps every item with its category, location and value, and adds "
+                 "it all up for you. Checking the inventory, answering the board and having the list "
+                 "ready for an insurance quote becomes easy."]},
+            {"type": "features", "kicker": "How it works", "h2": "What is recorded for each item",
+             "items": [
+                 ("package", "ic-green", "A record for each item", None),
+                 ("tag", "ic-blue", "Your church's categories", None),
+                 ("coins", "ic-green", "How much is invested", None),
+                 ("map-pin", "ic-blue", "Where everything is", None),
+                 ("image", "ic-green", "A photo of the item", None),
+                 ("archive", "ic-blue", "Retire without losing history", None),
+                 ("download", "ic-green", "A spreadsheet to check against", None),
+                 ("search", "ic-blue", "Who changed what", None),
+             ],
+             "plain": {
+                 "A record for each item": "Name, category, location, quantity, unit value, purchase date, condition (new, good, fair or poor), asset tag number and notes.",
+                 "Your church's categories": "The list starts with sound and media, musical instruments, furniture, IT equipment, kitchen and appliances, vehicles, real estate and other. Rename, hide or add your own.",
+                 "How much is invested": "The system multiplies quantity by unit value and shows the overall total and the total per category, with each one's share. Amounts are in Brazilian reais.",
+                 "Where everything is": "Every item has a location, such as the sanctuary, the hall or the kitchen. Filter by location, category, status or condition, or search by name and tag number.",
+                 "A photo of the item": "One photo per item (PNG, JPG or WEBP, up to 5 MB) helps people recognise the equipment and check its condition during the inventory.",
+                 "Retire without losing history": "When something breaks, is sold, given away or goes missing, you retire it with the date and the reason. It leaves the total but stays on record, and the retirement can be undone.",
+                 "A spreadsheet to check against": "The list exports to CSV, which opens in Excel, for printing the inventory, checking item by item or sending to the accountant.",
+                 "Who changed what": "Creating, editing, retiring and deleting items all go into the system's audit trail, with who did it and when.",
+             }},
+            {"type": "prose", "kicker": "Who has access", "h2": "For the people who look after the building",
+             "paras": [
+                 "The asset list is available to the leadership and to the secretary and treasurer "
+                 "roles. Operators and members do not see it.",
+                 "The module is included in every plan, the free one too, at no extra cost and with "
+                 "no limit on how many items you register."]},
+            {"type": "prose", "kicker": "Being clear about limits", "h2": "What the module does not do",
+             "paras": [
+                 "So there is no surprise: the system does not calculate depreciation, does not "
+                 "track equipment loans and does not print labels. It also does not post the "
+                 "purchase to the finances by itself: assets are a separate record, and the expense "
+                 "is still entered in the finance module as usual."]},
+        ],
+        "faq": [
+            ("Does asset management cost extra?",
+             "No. It is part of every plan, the free one included, with no limit on the number of items."),
+            ("Can we see how much the church has invested?",
+             "Yes. The system adds up quantity times unit value for every active item and shows the overall total and the total per category. Donated items with no known value can be recorded too."),
+            ("What happens when a piece of equipment breaks or is given away?",
+             "You retire it with the date and the reason: damaged, sold, donated, lost or other. It leaves the invested total, but the record stays in the system and the retirement can be undone."),
+            ("Who on the team can record assets?",
+             "The leadership and the secretary and treasurer roles. Operators and members have no access to the asset list."),
         ],
     },
 ]

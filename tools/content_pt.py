@@ -41,12 +41,17 @@ PAGES: list[dict] = [
                  ("globe", "ic-blue", "Site da igreja",
                   "Site público com páginas, galeria, horários de culto, agenda e Pix, editável sem saber programar. Incluso nos planos pagos.",
                   "/site-para-igrejas/"),
+                 ("package", "ic-green", "Patrimônio",
+                  "Caixas de som, instrumentos, cadeiras, computadores e veículos cadastrados com local, foto e valor, e o total que a igreja tem investido.",
+                  "/controle-patrimonio-igreja/"),
+                 ("key", "ic-blue", "Perfis por função", None),
                  ("receipt", "ic-blue", "Portal do membro", None),
                  ("calendar", "ic-blue", "Agenda e avisos", None),
                  ("heart", "ic-green", "Pedidos de oração", None),
                  ("chart-column", "ic-green", "Relatórios e indicadores", None),
              ],
              "plain": {
+                 "Perfis por função": "Cada pessoa da equipe entra com o próprio login e um perfil. A secretaria cuida dos membros e da agenda sem ver valores; a tesouraria cuida do dinheiro sem abrir o cadastro de membros.",
                  "Portal do membro": "Cada membro entra com o próprio login, vê o que contribuiu, baixa o informe anual em PDF, manda pedido de oração e lê os avisos.",
                  "Agenda e avisos": "Cultos e eventos cadastrados uma vez aparecem no painel, no portal do membro e no site da igreja. O mural de avisos destaca o que é urgente.",
                  "Pedidos de oração": "O pedido chega para a liderança, que acompanha como \"orando\" e devolve uma resposta ao membro quando for o caso.",
@@ -74,7 +79,7 @@ PAGES: list[dict] = [
             ("Dá para trazer a lista de membros que já temos?",
              "Dá. O assistente de importação lê planilhas do Excel (.xlsx, .xls) e arquivos CSV, sugere a qual campo cada coluna corresponde e mostra tudo para você conferir antes de salvar. Cadastros repetidos são barrados pelo CPF, pelo e-mail ou pelo nome."),
             ("Quantas pessoas da equipe podem usar?",
-             "Quantas a igreja precisar, em qualquer plano. Pastor, tesoureiro, secretária e líderes têm logins separados, cada um com a sua permissão. O limite dos planos é de membros cadastrados, não de usuários."),
+             "Quantas a igreja precisar, em qualquer plano. Cada pessoa tem o seu login e um perfil: administrador, gestor, secretaria, tesouraria ou operador. A secretaria cuida dos membros e da agenda sem ver valores, e a tesouraria cuida do dinheiro sem abrir o cadastro de membros. O limite dos planos é de membros cadastrados, não de usuários."),
             ("O plano gratuito tem prazo para acabar?",
              "Não. O plano gratuito atende até 50 membros cadastrados, para sempre, sem cartão de crédito."),
         ],
@@ -110,8 +115,8 @@ PAGES: list[dict] = [
             {"type": "prose", "kicker": "Transparência", "h2": "Prestação de contas sem expor ninguém",
              "paras": [
                  "O relatório de transparência mostra à igreja quanto entrou e quanto saiu por mês, "
-                 "sem dizer quem deu quanto. Os valores por pessoa ficam restritos a quem tem "
-                 "permissão de tesouraria ou direção.",
+                 "sem dizer quem deu quanto. Os valores por pessoa ficam restritos à direção, à "
+                 "tesouraria e a quem lança as contribuições.",
                  "Para a reunião de prestação de contas, o fechamento do mês sai em PDF com a "
                  "comparação com o mês anterior, as entradas por tipo, as despesas por categoria e "
                  "o que já está previsto para os próximos 30 dias."]},
@@ -132,7 +137,7 @@ PAGES: list[dict] = [
             ("O membro consegue comprovar quanto contribuiu?",
              "Sim. No portal do membro ele vê o próprio histórico e baixa o informe anual em PDF."),
             ("Quem pode ver quanto cada pessoa contribuiu?",
-             "Somente quem tem permissão de administração ou gestão. O relatório aberto à igreja mostra apenas totais, sem nomes."),
+             "A direção, a tesouraria e os operadores que lançam as contribuições. O perfil de secretaria não vê valores, e cada membro vê só o que ele mesmo deu. O relatório aberto à igreja mostra apenas totais, sem nomes."),
         ],
     },
     {
@@ -235,7 +240,7 @@ PAGES: list[dict] = [
             ("Consigo um relatório para levar à reunião?",
              "Sim. O fechamento do mês sai em PDF com papel timbrado, numeração de páginas e o comparativo com o mês anterior. O relatório por categoria também sai em PDF com linhas de assinatura, ou em Excel."),
             ("Quem da equipe vê o financeiro?",
-             "Somente quem tem permissão de administração ou gestão. Operadores e membros não acessam a tesouraria."),
+             "A direção e o perfil de tesouraria lançam receitas e despesas e tiram os relatórios. O operador registra dízimos e ofertas e consulta os lançamentos, sem mexer nas contas. A secretaria e os membros não acessam o financeiro."),
             ("Dá para exportar os dados?",
              "Dá. Lançamentos, contribuições e cadastros saem em CSV, e os relatórios de transparência e por categoria saem também em Excel."),
         ],
@@ -345,9 +350,9 @@ PAGES: list[dict] = [
              ]},
             {"type": "prose", "kicker": "Quem vê o quê", "h2": "Cada relatório para o público certo",
              "paras": [
-                 "Os valores por pessoa ficam restritos a quem tem permissão de administração ou "
-                 "gestão. Operadores e membros não acessam a tesouraria, e o relatório aberto à "
-                 "igreja nunca traz nomes.",
+                 "Os valores por pessoa ficam restritos à direção, à tesouraria e a quem lança as "
+                 "contribuições. A secretaria e os membros não veem valores, e o relatório aberto "
+                 "à igreja nunca traz nomes.",
                  "Para o contador, os lançamentos, as contribuições e as campanhas saem em CSV, que "
                  "abre no Excel e em qualquer sistema contábil. O Portal da Igreja não substitui a "
                  "contabilidade nem emite documento fiscal: ele organiza os números e entrega o "
@@ -355,7 +360,7 @@ PAGES: list[dict] = [
         ],
         "faq": [
             ("Dá para mostrar as contas sem expor quem contribuiu?",
-             "Dá, e é o padrão. O relatório de transparência mostra os totais por mês, sem nomes nem valores individuais. Quanto cada pessoa contribuiu só aparece para quem tem permissão de tesouraria ou direção."),
+             "Dá, e é o padrão. O relatório de transparência mostra os totais por mês, sem nomes nem valores individuais. Quanto cada pessoa contribuiu só aparece para a direção, a tesouraria e quem lança as contribuições."),
             ("O relatório serve para a reunião de diretoria?",
              "Serve. O fechamento do mês sai em PDF com papel timbrado, páginas numeradas, comparativo com o mês anterior, despesas por categoria e as maiores saídas. O relatório por categoria ainda traz linhas de assinatura."),
             ("E se alguém questionar um lançamento?",
@@ -364,6 +369,70 @@ PAGES: list[dict] = [
              "Sim. Ele mesmo baixa o informe anual em PDF pelo portal do membro, sem precisar pedir à secretaria."),
             ("Substitui o contador?",
              "Não. O sistema organiza os lançamentos e gera os relatórios; a contabilidade e as obrigações fiscais continuam com o seu contador, que pode receber tudo em CSV ou Excel."),
+        ],
+    },
+    {
+        "slug": "controle-patrimonio-igreja",
+        "title": "Controle de Patrimônio da Igreja | Portal da Igreja",
+        "description": ("Cadastre os bens da igreja com categoria, local, foto e valor, saiba "
+                        "quanto a igreja tem investido e dê baixa sem perder o histórico."),
+        "kicker": "Patrimônio",
+        "h1": "Controle de patrimônio da igreja: o que ela tem, onde está e quanto vale",
+        "lead": ("Caixas de som, mesa de som, instrumentos, cadeiras, bancos, computadores, "
+                 "geladeira e veículos cadastrados num lugar só, com local, foto e valor. A "
+                 "igreja passa a saber o que tem e quanto já investiu em cada área."),
+        "blocks": [
+            {"type": "prose", "kicker": "O problema", "h2": "Ninguém sabe ao certo o que a igreja tem",
+             "paras": [
+                 "Os equipamentos chegam aos poucos: uma doação aqui, uma compra da campanha ali, "
+                 "um microfone que alguém trouxe de casa. Anos depois, ninguém sabe dizer quantas "
+                 "cadeiras existem, onde foi parar o projetor ou quanto vale o que está no templo.",
+                 "O módulo de patrimônio guarda cada bem com a sua categoria, o local e o valor, e "
+                 "soma tudo sozinho. Fica fácil conferir o inventário, responder à diretoria e "
+                 "ter a lista pronta quando for contratar um seguro."]},
+            {"type": "features", "kicker": "Como funciona", "h2": "O que fica registrado de cada bem",
+             "items": [
+                 ("package", "ic-green", "Cadastro de cada bem", None),
+                 ("tag", "ic-blue", "Categorias da sua igreja", None),
+                 ("coins", "ic-green", "Quanto a igreja tem investido", None),
+                 ("map-pin", "ic-blue", "Onde cada coisa está", None),
+                 ("image", "ic-green", "Foto do bem", None),
+                 ("archive", "ic-blue", "Baixa sem apagar o histórico", None),
+                 ("download", "ic-green", "Planilha para conferência", None),
+                 ("search", "ic-blue", "Quem mexeu em quê", None),
+             ],
+             "plain": {
+                 "Cadastro de cada bem": "Nome, categoria, local, quantidade, valor unitário, data de aquisição, estado de conservação (novo, bom, regular ou ruim), número de patrimônio e observações.",
+                 "Categorias da sua igreja": "A lista já começa com som e mídia, instrumentos musicais, móveis, informática, cozinha e eletrodomésticos, veículos, imóveis e outros. Renomeie, oculte ou crie as suas.",
+                 "Quanto a igreja tem investido": "O sistema multiplica a quantidade pelo valor unitário e mostra o total geral e o total por categoria, com o peso de cada uma. 120 cadeiras de R$ 45,50 viram R$ 5.460,00 sem conta de cabeça.",
+                 "Onde cada coisa está": "Cada bem tem o seu local, como templo, salão social ou cozinha. Filtre por local, categoria, situação ou conservação, ou busque pelo nome e pelo número de patrimônio.",
+                 "Foto do bem": "Uma foto por bem (PNG, JPG ou WEBP, até 5 MB) ajuda a reconhecer o equipamento e a conferir o estado dele no inventário.",
+                 "Baixa sem apagar o histórico": "Quando algo quebra, é vendido, doado ou some, você dá baixa com a data e o motivo. O bem sai do total, mas continua consultável, e a baixa pode ser desfeita.",
+                 "Planilha para conferência": "A lista sai em CSV, que abre no Excel, para imprimir o inventário, conferir item por item ou mandar para o contador.",
+                 "Quem mexeu em quê": "Cadastro, alteração, baixa e exclusão ficam na trilha de auditoria do sistema, com quem fez e quando.",
+             }},
+            {"type": "prose", "kicker": "Quem acessa", "h2": "Para quem cuida da casa",
+             "paras": [
+                 "O patrimônio fica disponível para a direção e para os perfis de secretaria e de "
+                 "tesouraria. Operadores e membros não veem a lista de bens.",
+                 "O módulo está incluído em todos os planos, inclusive no gratuito, sem custo "
+                 "adicional e sem limite de bens cadastrados."]},
+            {"type": "prose", "kicker": "Transparente sobre limites", "h2": "O que o módulo não faz",
+             "paras": [
+                 "Para não haver surpresa: o sistema não calcula depreciação, não controla "
+                 "empréstimo de equipamentos nem gera etiquetas. Também não lança a compra no "
+                 "financeiro sozinho: o patrimônio é um controle à parte, e a despesa da compra "
+                 "continua sendo lançada no financeiro, como sempre."]},
+        ],
+        "faq": [
+            ("O controle de patrimônio custa à parte?",
+             "Não. Ele está em todos os planos, inclusive no gratuito, e não há limite de bens cadastrados."),
+            ("Dá para saber quanto a igreja tem investido?",
+             "Dá. O sistema soma a quantidade vezes o valor unitário de cada bem ativo e mostra o total geral e o total por categoria. Bens doados sem valor informado também podem ser cadastrados."),
+            ("E quando um equipamento quebra ou é doado?",
+             "Você dá baixa informando a data e o motivo: danificado, vendido, doado, extraviado ou outro. O bem sai do total investido, mas o registro continua no sistema e a baixa pode ser desfeita."),
+            ("Quem da equipe pode cadastrar os bens?",
+             "A direção e os perfis de secretaria e de tesouraria. Operadores e membros não acessam o patrimônio."),
         ],
     },
 ]

@@ -41,6 +41,7 @@ NAV_LABELS = {
     "controle-dizimos-ofertas": "Dízimos",
     "financeiro-para-igrejas": "Financeiro",
     "prestacao-de-contas-igreja": "Transparência",
+    "controle-patrimonio-igreja": "Patrimônio",
     "site-para-igrejas": "Site",
 }
 RELATED_SUB = {
@@ -50,6 +51,7 @@ RELATED_SUB = {
     "financeiro-para-igrejas": "Receitas, despesas, contas fixas e o fechamento do mês em PDF.",
     "site-para-igrejas": "Site público com agenda, horários de culto e Pix, incluso nos planos pagos.",
     "prestacao-de-contas-igreja": "O relatório da reunião, a transparência para a igreja e o informe anual.",
+    "controle-patrimonio-igreja": "Os bens da igreja com local, foto e valor, e quanto ela tem investido.",
 }
 RELATED_LABELS = {
     "sistema-gestao-igrejas": "Sistema de gestão para igrejas",
@@ -58,6 +60,7 @@ RELATED_LABELS = {
     "financeiro-para-igrejas": "Financeiro para igrejas",
     "site-para-igrejas": "Site para igrejas",
     "prestacao-de-contas-igreja": "Prestação de contas",
+    "controle-patrimonio-igreja": "Controle de patrimônio",
 }
 
 
@@ -71,6 +74,7 @@ NAV_LABELS_EN = {
     "church-tithes-offerings": "Giving",
     "church-accounting-software": "Finances",
     "church-financial-reports": "Reports",
+    "church-asset-management": "Assets",
     "church-website-builder": "Website",
 }
 RELATED_LABELS_EN = {
@@ -80,6 +84,7 @@ RELATED_LABELS_EN = {
     "church-accounting-software": "Church accounting",
     "church-financial-reports": "Financial reports",
     "church-website-builder": "Church website builder",
+    "church-asset-management": "Church asset management",
 }
 RELATED_SUB_EN = {
     "church-management-software": "The whole picture, from member records to the monthly report.",
@@ -88,6 +93,7 @@ RELATED_SUB_EN = {
     "church-accounting-software": "Income, expenses, fixed bills and the monthly closing as a PDF.",
     "church-financial-reports": "The board report, transparency with no names, and the audit trail.",
     "church-website-builder": "A public site with the calendar, service times and Pix, included in paid plans.",
+    "church-asset-management": "The church's equipment with location, photo and value, and how much is invested.",
 }
 # Páginas equivalentes entre os idiomas, para o hreflang. A home é o par "".
 EQUIVALENT = {
@@ -98,6 +104,7 @@ EQUIVALENT = {
     "financeiro-para-igrejas": "church-accounting-software",
     "prestacao-de-contas-igreja": "church-financial-reports",
     "site-para-igrejas": "church-website-builder",
+    "controle-patrimonio-igreja": "church-asset-management",
 }
 EN_OF_PT = EQUIVALENT
 PT_OF_EN = {v: k for k, v in EQUIVALENT.items()}

@@ -63,6 +63,7 @@ EQUIVALENT = {
     "/financeiro-para-igrejas/": "/en/church-accounting-software/",
     "/prestacao-de-contas-igreja/": "/en/church-financial-reports/",
     "/site-para-igrejas/": "/en/church-website-builder/",
+    "/controle-patrimonio-igreja/": "/en/church-asset-management/",
 }
 FAILURES: list[str] = []
 CHECKS = 0

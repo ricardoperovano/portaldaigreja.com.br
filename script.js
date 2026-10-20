@@ -32,7 +32,7 @@
 
   // Close on resize to desktop
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 860) setOpen(false);
+    if (window.innerWidth > 1100) setOpen(false);
   });
 })();
 

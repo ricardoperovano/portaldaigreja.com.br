@@ -20,7 +20,7 @@ qualquer página comercial.
 3. **O site da igreja não é otimizado para buscadores.** É renderizado por JavaScript, sem
    meta tags, sitemap ou dados estruturados por igreja. Não prometa "apareça no Google".
 4. **Domínio próprio depende de configuração manual** de DNS/certificado junto ao time.
-5. **Não existe:** presença/check-in, escalas de voluntários, patrimônio, secretaria
+5. **Não existe:** presença/check-in, escalas de voluntários, documentos de secretaria
    (carteirinha, atas, cartas de transferência), anexos de comprovantes, contas a pagar com
    baixa, conciliação bancária, EBD, ministério infantil, multi-congregação, envio em massa
    de e-mail/WhatsApp, API pública e IA.
@@ -62,7 +62,7 @@ inativos e transferidos (qualquer cadastro não excluído).
 | 12 | Visitantes | **B** | só o status "visitante" na ficha. Sem formulário público nem funil | `BE models/member.py:17` | não destacar |
 | 13 | Escola bíblica/ensino | **D** | não existe | — | — |
 | 14 | Ministério infantil | **D** | não existe | — | — |
-| 15 | Patrimônio | **D** | não existe | — | — |
+| 15 | Patrimônio | **A** | bens com categoria (8 iniciais, editáveis), local, quantidade, valor unitário, aquisição, conservação, nº de patrimônio, foto (PNG/JPG/WEBP até 5 MB), observações; total investido geral e por categoria (só bens ativos); filtros e busca; baixa com motivo e data, reversível; exportação CSV; auditoria. Todos os planos. Acesso: admin, gestor, secretaria, tesouraria. **Sem** depreciação, empréstimo, etiquetas ou ligação com o financeiro | `BE services/asset.py`, `api/v1/assets.py`, migração 0040 | `/controle-patrimonio-igreja/` |
 | 16 | Comunicação | **B** | mural de avisos no portal; e-mails do sistema (convite, redefinição, aniversariantes, reativação). **Sem** envio em massa, segmentação, WhatsApp oficial, SMS ou push | `BE models/engagement.py:94`, `tasks/email.py` | citado com cuidado |
 | 17 | Portal do membro | **A** | perfil, contribuições, informe anual, campanhas, Pix, orações, agenda, avisos, consentimentos, sessões, exportação dos próprios dados | `BE api/v1/me.py` | citado em todas |
 | 17b | Transparência para o membro | **D** | o relatório de transparência é acessível só pela equipe | `BE api/v1/reports.py:77` | **não** prometer ao membro |
@@ -71,7 +71,7 @@ inativos e transferidos (qualquer cadastro não excluído).
 | 18c | Domínio próprio | **B** | o sistema resolve o domínio, mas DNS e certificado são manuais | `BE models/site.py:44` | "caso a caso, com o time" |
 | 19 | Relatórios | **A** | painel com pulso, financeiro por período, fechamento do mês em PDF, transparência (PDF/Excel), doadores, por categoria (PDF/Excel), aniversariantes, exportações CSV | `BE services/report.py`, `services/category_report.py` | `/prestacao-de-contas-igreja/` |
 | 20 | Multi-igreja/congregações | **D** | cada igreja é um ambiente isolado; não há consolidação entre unidades | `BE models/church.py` | **não** prometer |
-| 21 | Usuários e permissões | **A** | 5 papéis, 2FA opcional (TOTP), sessões por dispositivo com revogação, bloqueio por tentativas, auditoria imutável, primeiro acesso por link | `BE api/deps.py`, `services/twofa.py`, migração 0018 | citado |
+| 21 | Usuários e permissões | **A** | 7 papéis (admin, gestor, secretaria, tesouraria, operador, suporte, cliente). Secretaria: pessoas, agenda, avisos, orações, patrimônio, sem valores. Tesouraria: contribuições, financeiro, campanhas, relatórios, transparência, patrimônio, sem área de membros. Valores por pessoa: admin, gestor, tesouraria e operador. Relatórios financeiros: admin, gestor, tesouraria. Conjuntos em `BE core/permissions.py`; 2FA opcional (TOTP), sessões por dispositivo com revogação, bloqueio por tentativas, auditoria imutável, primeiro acesso por link | `BE api/deps.py`, `services/twofa.py`, migração 0018 | citado |
 | 21b | Permissões granulares | **D** | o acesso é por papel fixo, não por módulo ou ministério | — | — |
 | 22 | Documentos e arquivos | **D** | só imagens do site; não há repositório de documentos | — | — |
 | 23 | Ações sociais e missões | **C** | dá para usar campanhas e o tipo "doação", mas não é um módulo | — | — |

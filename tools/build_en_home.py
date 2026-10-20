@@ -199,6 +199,13 @@ PAIRS: list[tuple[str, str]] = [
     ("Aniversariantes", "Birthdays"),
     ("Nascimento e casamento: lembrete todo dia de manhã para a liderança cuidar de quem faz parte da igreja.",
      "Birthdays and wedding anniversaries: a reminder every morning so the leadership can care for their people."),
+    ("Som, instrumentos, cadeiras e equipamentos com local, foto e valor. Saiba o que a igreja tem e quanto já investiu.",
+     "Sound, instruments, chairs and equipment with location, photo and value. Know what the church owns and how much it has invested."),
+    ("Secretaria e tesouraria", "Secretary and treasurer roles"),
+    ("Cada um com o seu perfil: a secretaria cuida das pessoas sem ver valores, a tesouraria cuida do dinheiro.",
+     "Each with their own role: the secretary looks after people without seeing amounts, the treasurer looks after the money."),
+    ("Controle de patrimônio", "Church asset management"),
+    (">Patrimônio<", ">Assets<"),
     ("Quer ver um módulo por dentro?", "Want to see a module in detail?"),
     ("Sistema de gestão para igrejas", "Church management software"),
     ("Controle de dízimos e ofertas", "Tithes and offerings"),
@@ -311,8 +318,8 @@ PAIRS: list[tuple[str, str]] = [
     ("Não. O plano gratuito é para sempre, sem cartão de crédito e sem prazo para acabar. Você usa à vontade e só evolui de plano quando a sua igreja precisar de mais recursos.",
      "No. The free plan lasts forever, with no credit card and no deadline. You move to a paid plan only when your church needs more room."),
     ("Quantos usuários posso cadastrar?", "How many users can I create?"),
-    ("Quantos a sua equipe precisar, em qualquer plano: pastores, tesoureiros, secretários e líderes, cada um com a sua permissão. O que muda de um plano para o outro é o limite de membros cadastrados, não o número de usuários.",
-     "As many as your team needs, on any plan: pastors, treasurers, secretaries and leaders, each with their own permissions. What changes between plans is the limit of registered members, not the number of users."),
+    ("Quantos a sua equipe precisar, em qualquer plano. Cada pessoa entra com o seu login e um perfil: a secretaria cuida dos membros e da agenda sem ver valores, a tesouraria cuida do dinheiro sem abrir o cadastro de membros, e a direção vê tudo. O que muda de um plano para o outro é o limite de membros cadastrados, não o número de usuários.",
+     "As many as your team needs, on any plan. Each person signs in with their own login and a role: the secretary handles members and the calendar without seeing amounts, the treasurer handles the money without opening the member records, and the leadership sees everything. What changes between plans is the limit of registered members, not the number of users."),
     ("Como funciona o Portal do Membro?", "How does the member portal work?"),
     ("Cada membro pode acessar o próprio extrato de contribuições e baixar o informe anual em PDF. Isso reduz as perguntas para a tesouraria e aumenta a transparência com toda a igreja.",
      "Each member can see their own giving history and download the annual statement as a PDF. That cuts down the questions to the treasurer and builds trust across the church."),
@@ -392,7 +399,8 @@ def main() -> int:
                              ("controle-dizimos-ofertas", "church-tithes-offerings"),
                              ("financeiro-para-igrejas", "church-accounting-software"),
                              ("prestacao-de-contas-igreja", "church-financial-reports"),
-                             ("site-para-igrejas", "church-website-builder")):
+                             ("site-para-igrejas", "church-website-builder"),
+                             ("controle-patrimonio-igreja", "church-asset-management")):
         out = out.replace(f'href="/{pt_slug}/"', f'href="/en/{en_slug}/"')
     out = out.replace('<a href="mailto:suporte@portaldaigreja.com.br">',
                       '<a href="/" hreflang="pt-BR" lang="pt-BR">Português</a>\n'

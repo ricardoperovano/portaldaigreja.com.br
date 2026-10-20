@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F49Y1WNQ4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // LGPD: nada de medição antes do aceite. O Consent Mode segura o GA4 até o
+    // visitante decidir no banner (ver script.js).
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('config', 'G-F49Y1WNQ4H');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Patrimônio da Igreja | Portal da Igreja</title>
+  <meta name="description" content="Cadastre os bens da igreja com categoria, local, foto e valor, saiba quanto a igreja tem investido e dê baixa sem perder o histórico." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0F2D4A" />
+  <link rel="canonical" href="https://portaldaigreja.com.br/controle-patrimonio-igreja/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://portaldaigreja.com.br/controle-patrimonio-igreja/" />
+  <link rel="alternate" hreflang="en" href="https://portaldaigreja.com.br/en/church-asset-management/" />
+  <link rel="alternate" hreflang="x-default" href="https://portaldaigreja.com.br/controle-patrimonio-igreja/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Portal da Igreja" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://portaldaigreja.com.br/controle-patrimonio-igreja/" />
+  <meta property="og:title" content="Controle de Patrimônio da Igreja | Portal da Igreja" />
+  <meta property="og:description" content="Cadastre os bens da igreja com categoria, local, foto e valor, saiba quanto a igreja tem investido e dê baixa sem perder o histórico." />
+  <meta property="og:image" content="https://portaldaigreja.com.br/assets/brand/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Portal da Igreja — sistema de gestão para igrejas" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Controle de Patrimônio da Igreja | Portal da Igreja" />
+  <meta name="twitter:description" content="Cadastre os bens da igreja com categoria, local, foto e valor, saiba quanto a igreja tem investido e dê baixa sem perder o histórico." />
+  <meta name="twitter:image" content="https://portaldaigreja.com.br/assets/brand/og-image.png" />
+
+  <link rel="icon" href="/favicon-48.png" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://portaldaigreja.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Patrimônio",
+        "item": "https://portaldaigreja.com.br/controle-patrimonio-igreja/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O controle de patrimônio custa à parte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Ele está em todos os planos, inclusive no gratuito, e não há limite de bens cadastrados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dá para saber quanto a igreja tem investido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dá. O sistema soma a quantidade vezes o valor unitário de cada bem ativo e mostra o total geral e o total por categoria. Bens doados sem valor informado também podem ser cadastrados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E quando um equipamento quebra ou é doado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você dá baixa informando a data e o motivo: danificado, vendido, doado, extraviado ou outro. O bem sai do total investido, mas o registro continua no sistema e a baixa pode ser desfeita."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem da equipe pode cadastrar os bens?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A direção e os perfis de secretaria e de tesouraria. Operadores e membros não acessam o patrimônio."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo" aria-label="Portal da Igreja - início">
+        <img src="/assets/brand/logo-horizontal.svg" alt="Portal da Igreja — sistema de gestão para igrejas" width="134" height="40" decoding="async" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="/sistema-gestao-igrejas/">Sistema</a>
+        <a href="/cadastro-membros-igreja/">Membros</a>
+        <a href="/controle-dizimos-ofertas/">Dízimos</a>
+        <a href="/financeiro-para-igrejas/">Financeiro</a>
+        <a href="/prestacao-de-contas-igreja/">Transparência</a>
+        <a href="/controle-patrimonio-igreja/" aria-current="page">Patrimônio</a>
+        <a href="/site-para-igrejas/">Site</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://app.portaldaigreja.com.br/login">Entrar</a>
+        <a class="btn btn-primary" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <a href="/sistema-gestao-igrejas/">Sistema</a>
+        <a href="/cadastro-membros-igreja/">Membros</a>
+        <a href="/controle-dizimos-ofertas/">Dízimos</a>
+        <a href="/financeiro-para-igrejas/">Financeiro</a>
+        <a href="/prestacao-de-contas-igreja/">Transparência</a>
+        <a href="/controle-patrimonio-igreja/" aria-current="page">Patrimônio</a>
+        <a href="/site-para-igrejas/">Site</a>
+      <a href="/#planos">Ver planos e preços</a>
+      <a href="/en/church-asset-management/" hreflang="en" lang="en">English</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="https://app.portaldaigreja.com.br/login">Entrar</a>
+        <a class="btn btn-primary" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container container-narrow">
+        <div class="hero-copy">
+          <span class="eyebrow">Patrimônio</span>
+          <h1>Controle de patrimônio da igreja: o que ela tem, onde está e quanto vale</h1>
+          <p class="lead">Caixas de som, mesa de som, instrumentos, cadeiras, bancos, computadores, geladeira e veículos cadastrados num lugar só, com local, foto e valor. A igreja passa a saber o que tem e quanto já investiu em cada área.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+            <a class="btn btn-outline btn-lg" href="/#planos">Ver planos e preços</a>
+          </div>
+          <p class="hero-badge"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#circle-check"/></svg>Plano gratuito até 50 membros · Sem cartão de crédito</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">O problema</span>
+          <h2>Ninguém sabe ao certo o que a igreja tem</h2>
+        </div>
+        <p class='lead'>Os equipamentos chegam aos poucos: uma doação aqui, uma compra da campanha ali, um microfone que alguém trouxe de casa. Anos depois, ninguém sabe dizer quantas cadeiras existem, onde foi parar o projetor ou quanto vale o que está no templo.</p><p class='lead'>O módulo de patrimônio guarda cada bem com a sua categoria, o local e o valor, e soma tudo sozinho. Fica fácil conferir o inventário, responder à diretoria e ter a lista pronta quando for contratar um seguro.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Como funciona</span>
+          <h2>O que fica registrado de cada bem</h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature">
+            <span class="feat-icon ic-green"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#package"/></svg></span>
+            <h3>Cadastro de cada bem</h3>
+            <p>Nome, categoria, local, quantidade, valor unitário, data de aquisição, estado de conservação (novo, bom, regular ou ruim), número de patrimônio e observações.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#tag"/></svg></span>
+            <h3>Categorias da sua igreja</h3>
+            <p>A lista já começa com som e mídia, instrumentos musicais, móveis, informática, cozinha e eletrodomésticos, veículos, imóveis e outros. Renomeie, oculte ou crie as suas.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#coins"/></svg></span>
+            <h3>Quanto a igreja tem investido</h3>
+            <p>O sistema multiplica a quantidade pelo valor unitário e mostra o total geral e o total por categoria, com o peso de cada uma. 120 cadeiras de R$ 45,50 viram R$ 5.460,00 sem conta de cabeça.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#map-pin"/></svg></span>
+            <h3>Onde cada coisa está</h3>
+            <p>Cada bem tem o seu local, como templo, salão social ou cozinha. Filtre por local, categoria, situação ou conservação, ou busque pelo nome e pelo número de patrimônio.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#image"/></svg></span>
+            <h3>Foto do bem</h3>
+            <p>Uma foto por bem (PNG, JPG ou WEBP, até 5 MB) ajuda a reconhecer o equipamento e a conferir o estado dele no inventário.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#archive"/></svg></span>
+            <h3>Baixa sem apagar o histórico</h3>
+            <p>Quando algo quebra, é vendido, doado ou some, você dá baixa com a data e o motivo. O bem sai do total, mas continua consultável, e a baixa pode ser desfeita.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-green"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#download"/></svg></span>
+            <h3>Planilha para conferência</h3>
+            <p>A lista sai em CSV, que abre no Excel, para imprimir o inventário, conferir item por item ou mandar para o contador.</p>
+          </article>
+          <article class="feature">
+            <span class="feat-icon ic-blue"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#search"/></svg></span>
+            <h3>Quem mexeu em quê</h3>
+            <p>Cadastro, alteração, baixa e exclusão ficam na trilha de auditoria do sistema, com quem fez e quando.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">Quem acessa</span>
+          <h2>Para quem cuida da casa</h2>
+        </div>
+        <p class='lead'>O patrimônio fica disponível para a direção e para os perfis de secretaria e de tesouraria. Operadores e membros não veem a lista de bens.</p><p class='lead'>O módulo está incluído em todos os planos, inclusive no gratuito, sem custo adicional e sem limite de bens cadastrados.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">Transparente sobre limites</span>
+          <h2>O que o módulo não faz</h2>
+        </div>
+        <p class='lead'>Para não haver surpresa: o sistema não calcula depreciação, não controla empréstimo de equipamentos nem gera etiquetas. Também não lança a compra no financeiro sozinho: o patrimônio é um controle à parte, e a despesa da compra continua sendo lançada no financeiro, como sempre.</p>
+      </div>
+    </section>
+    <section class="section faq" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="kicker">Dúvidas frequentes</span>
+          <h2>Perguntas de quem está avaliando</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>O controle de patrimônio custa à parte?</summary>
+            <div class="faq-answer"><p>Não. Ele está em todos os planos, inclusive no gratuito, e não há limite de bens cadastrados.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Dá para saber quanto a igreja tem investido?</summary>
+            <div class="faq-answer"><p>Dá. O sistema soma a quantidade vezes o valor unitário de cada bem ativo e mostra o total geral e o total por categoria. Bens doados sem valor informado também podem ser cadastrados.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>E quando um equipamento quebra ou é doado?</summary>
+            <div class="faq-answer"><p>Você dá baixa informando a data e o motivo: danificado, vendido, doado, extraviado ou outro. O bem sai do total investido, mas o registro continua no sistema e a baixa pode ser desfeita.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Quem da equipe pode cadastrar os bens?</summary>
+            <div class="faq-answer"><p>A direção e os perfis de secretaria e de tesouraria. Operadores e membros não acessam o patrimônio.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Veja também</span>
+          <h2>Outras partes do sistema</h2>
+        </div>
+        <div class="features-grid">
+          <a class="feature" href="/sistema-gestao-igrejas/"><h3>Sistema de gestão para igrejas</h3><p>A visão geral de tudo o que o sistema faz, do cadastro ao relatório.</p></a>
+          <a class="feature" href="/controle-dizimos-ofertas/"><h3>Controle de dízimos e ofertas</h3><p>Dízimo, oferta, Pix com QR Code e o informe anual do membro.</p></a>
+          <a class="feature" href="/cadastro-membros-igreja/"><h3>Cadastro de membros</h3><p>Ficha, famílias, grupos e a importação da planilha que a igreja já tem.</p></a>
+          <a class="feature" href="/financeiro-para-igrejas/"><h3>Financeiro para igrejas</h3><p>Receitas, despesas, contas fixas e o fechamento do mês em PDF.</p></a>
+          <a class="feature" href="/site-para-igrejas/"><h3>Site para igrejas</h3><p>Site público com agenda, horários de culto e Pix, incluso nos planos pagos.</p></a>
+          <a class="feature" href="/prestacao-de-contas-igreja/"><h3>Prestação de contas</h3><p>O relatório da reunião, a transparência para a igreja e o informe anual.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Comece hoje, no plano gratuito</h2>
+        <p>Crie a conta da sua igreja em poucos minutos e traga a sua lista de membros da planilha.</p>
+        <a class="btn btn-white btn-lg" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo-badge">
+          <img src="/assets/brand/logo-horizontal-branco.svg" alt="Portal da Igreja — sistema de gestão para igrejas" width="134" height="40" loading="lazy" decoding="async" />
+        </span>
+        <p>Gestão completa, segura e transparente para a sua igreja — na nuvem.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Produto</h4>
+        <a href="/sistema-gestao-igrejas/">Sistema de gestão para igrejas</a>
+        <a href="/controle-dizimos-ofertas/">Controle de dízimos e ofertas</a>
+        <a href="/cadastro-membros-igreja/">Cadastro de membros</a>
+        <a href="/financeiro-para-igrejas/">Financeiro para igrejas</a>
+        <a href="/site-para-igrejas/">Site para igrejas</a>
+        <a href="/prestacao-de-contas-igreja/">Prestação de contas</a>
+        <a href="/controle-patrimonio-igreja/">Controle de patrimônio</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="/#planos">Planos e preços</a>
+        <a href="mailto:suporte@portaldaigreja.com.br">suporte@portaldaigreja.com.br</a>
+        <a href="https://wa.me/5527998553591" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="/assets/brand/icons.svg#message-circle"/></svg>WhatsApp: (27) 99855-3591</a>
+        <a href="/en/church-asset-management/" hreflang="en" lang="en">English</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="https://app.portaldaigreja.com.br/privacidade">Política de Privacidade</a>
+        <a href="https://app.portaldaigreja.com.br/termos">Termos de Uso</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Portal da Igreja. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5527998553591?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Portal%20da%20Igreja%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+    <span class="wa-tooltip">Fale conosco no WhatsApp</span>
+    <svg class="wa-icon" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+      <path fill="#fff" d="M16.001 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.6 4.46 1.73 6.4L3.2 28.8l6.57-1.72a12.73 12.73 0 0 0 6.23 1.6h.01c7.06 0 12.8-5.74 12.8-12.8s-5.75-12.68-12.81-12.68zm0 23.02h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.9 1.02 1.04-3.8-.25-.4a10.57 10.57 0 0 1-1.62-5.65c0-5.86 4.77-10.62 10.63-10.62 2.84 0 5.5 1.11 7.51 3.12a10.55 10.55 0 0 1 3.11 7.51c0 5.86-4.77 10.63-10.62 10.63zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.39 5.38 4.76.75.32 1.34.51 1.79.66.75.24 1.44.21 1.98.13.6-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/>
+    </svg>
+  </a>
+
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a class="btn btn-primary btn-block" href="https://app.portaldaigreja.com.br/register-church">Criar conta grátis →</a>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
